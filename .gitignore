@@ -241,6 +241,11 @@ pyrightconfig.json
 
 # Local documentation manual
 /docs/manual/
+
+# Competition data and generated analysis artifacts
+/data/
+# Directly transformed source-audio examples stay local.
+/docs/reports/eda/mel_examples.png
 .ionide
 
 ### Windows ###

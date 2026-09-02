@@ -1,1 +1,8 @@
-# Add runtime dependencies with pinned versions before submission.
+numpy==2.5.2
+pandas==3.0.5
+matplotlib==3.11.1
+seaborn==0.13.2
+soundfile==0.14.0
+scipy==1.18.1
+openai-whisper==20250625
+jupyterlab==4.6.3
