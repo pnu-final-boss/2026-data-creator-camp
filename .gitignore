@@ -1,0 +1,37 @@
+# ---- 데이터: 절대 커밋 금지 ----
+# 33.7 GB 원본 음성. GitHub 파일당 100 MB 제한을 훨씬 넘고 LFS 로도 감당 불가.
+대학부 데이터/
+data_orgin/
+*.wav
+*.zip
+
+# ---- 개인정보 ----
+# 라벨 JSON 과 전사 텍스트에는 통화 내용과 주소(예: "서울특별시 은평구 진관동")가 들어 있다.
+# 마스킹된 [개인정보] 구간이 있더라도 공개 저장소에 올리지 않는다. Colab 전송은 Drive 경유만.
+cache/
+*.json.gz
+*.pkl
+*.npz
+
+# ---- 대회 제출물 (용량 크고 재생성 가능) ----
+ckpt/
+outputs/
+figs/
+
+# ---- 파이썬 ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ---- 에디터/OS ----
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# ---- 대회 배포 자료 ----
+# 저장소가 private 이고 재배포에 문제가 없다면 이 두 줄을 지우고 다시 add 할 것.
+dcc_annotation/

@@ -1,0 +1,15 @@
+# 로컬 CPU 베이스라인 — torch/librosa 불필요.
+# 오디오 특징은 wave + numpy + scipy 로 직접 계산한다 (src/common/audio.py).
+numpy>=2.0
+scipy>=1.14
+scikit-learn>=1.5
+pandas>=2.2
+matplotlib>=3.9
+joblib>=1.4
+tqdm>=4.66
+
+# Colab GPU 파인튜닝에서만 필요 (notebooks/ 참고). 로컬 설치 불필요.
+# torch>=2.4
+# torchaudio>=2.4
+# transformers>=4.44
+# accelerate>=0.33
