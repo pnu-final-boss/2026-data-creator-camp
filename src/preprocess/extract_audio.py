@@ -33,16 +33,25 @@ def _slice(x, s_ms, e_ms):
 
 
 def _overlap_flags(utts):
-    """다른 화자의 발화와 시간적으로 겹치는가. startAt/endAt 만 사용."""
+    """다른 화자의 발화와 시간적으로 겹치는가. startAt/endAt 만 사용.
+
+    실측 37% 가 여기에 해당한다. 맞장구("예", "네")가 상대 발화 위에 그대로 얹혀 있어서,
+    [startAt, endAt] 을 그냥 잘라내면 두 화자 음성이 섞인 조각이 나온다.
+    M2 정확도가 비중첩 0.8944 vs 중첩 0.8550 으로 갈리는 원인이다.
+
+    startAt/endAt 은 추론 시에도 허용된 필드이므로(출제 PDF 8쪽) 이 플래그는 규정 위반이 아니다.
+    통화당 발화가 30개 내외라 O(n^2) 이중 루프로 충분하다.
+    """
     n = len(utts)
     flags = np.zeros(n, dtype=np.int8)
     for i, a in enumerate(utts):
         for j, b in enumerate(utts):
             if i == j:
                 continue
+            # 두 구간이 겹칠 조건: b가 a 끝나기 전에 시작하고, a 시작한 뒤에 끝난다.
             if b["startAt"] < a["endAt"] and b["endAt"] > a["startAt"] and b["speaker"] != a["speaker"]:
                 flags[i] = 1
-                break
+                break                     # 하나만 겹쳐도 중첩이므로 더 볼 필요 없다
     return flags
 
 

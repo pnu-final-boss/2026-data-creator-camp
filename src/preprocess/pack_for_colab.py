@@ -14,6 +14,7 @@ Colab 은 원격 런타임이라 로컬 33.7 GB 원본을 볼 수 없다. GPU �
 import argparse
 import gzip
 import json
+from concurrent.futures import ProcessPoolExecutor
 
 import numpy as np
 
@@ -44,6 +45,23 @@ def _slice(x, s_ms, e_ms, max_sec=None):
     return seg
 
 
+# ------------------------------------------------------------------ src 코드
+def pack_src():
+    """src/ 를 zip 으로 묶는다.
+
+    노트북이 로컬과 똑같은 지표/그림 코드를 쓰게 하려면 저장소 코드가 Colab 에 있어야 한다.
+    GitHub push 를 했다면 !git clone 으로 대체 가능하지만, 이 zip 이면 push 없이도 된다.
+    """
+    import zipfile
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[2]
+    out = BUNDLE / "src.zip"
+    with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
+        for f in sorted(root.glob("src/**/*.py")):
+            z.write(f, f.relative_to(root).as_posix())
+    print(f"[pack] {out.name}  {out.stat().st_size/1024:.0f} KB")
+
+
 # ------------------------------------------------------------------ M3
 def pack_m3():
     out = {}
@@ -63,7 +81,53 @@ def pack_m3():
 
 
 # ------------------------------------------------------------------ M1 / M2
-def pack_audio(split, n_calls, caller_sec, max_utt_per_call, max_utt_sec, seed=0):
+def _pack_one(args):
+    """통화 하나에서 M1/M2 조각을 뽑는다. 병렬 워커로 호출된다.
+
+    직렬로 돌리면 5,200통에 약 130분이 걸린다. wav 디코딩이 통화당 1.5초쯤 되기 때문이다.
+    워커마다 독립적인 rng 를 seed 로 만들어 재현성을 유지한다.
+    """
+    r, audio_dir, caller_sec, max_utt_per_call, max_utt_sec, seed = args
+    try:
+        x = _read_all(audio_dir / (r["stem"] + ".wav"))
+    except Exception:
+        return None
+    utts = r["utterances"]
+    rng = np.random.default_rng(seed)
+
+    # --- M1: 신고자 구간을 caller_sec 초까지 이어붙인다 ---
+    chunks, tot = [], 0
+    for u in utts:
+        if u["speaker"] != 1:
+            continue
+        seg = _slice(x, u["startAt"], u["endAt"])
+        if len(seg) < 400:
+            continue
+        chunks.append(seg)
+        tot += len(seg)
+        if tot >= caller_sec * SR:
+            break
+    m1 = None
+    if chunks:
+        cat = np.concatenate(chunks)[: int(caller_sec * SR)]
+        m1 = (cat, 1 if r["gender"] == "M" else 0, r["stem"])
+
+    # --- M2: 발화 조각. 통화당 max_utt_per_call 개로 제한해 긴 통화가 과대표되지 않게 한다 ---
+    cand = []
+    for j, u in enumerate(utts):
+        seg = _slice(x, u["startAt"], u["endAt"], max_sec=max_utt_sec)
+        if len(seg) < 400:
+            continue
+        ov = any(b["startAt"] < u["endAt"] and b["endAt"] > u["startAt"]
+                 and b["speaker"] != u["speaker"] for k, b in enumerate(utts) if k != j)
+        cand.append((seg, int(u["speaker"]), int(ov)))
+    if len(cand) > max_utt_per_call:
+        pick = rng.choice(len(cand), size=max_utt_per_call, replace=False)
+        cand = [cand[i] for i in sorted(pick)]
+    return m1, cand
+
+
+def pack_audio(split, n_calls, caller_sec, max_utt_per_call, max_utt_sec, seed=0, workers=12):
     recs = load_split(split)
     audio_dir = TRAIN_AUDIO if split == "train" else VAL_AUDIO
     rng = np.random.default_rng(seed)
@@ -74,53 +138,29 @@ def pack_audio(split, n_calls, caller_sec, max_utt_per_call, max_utt_sec, seed=0
     m1_buf, m1_off, m1_y, m1_stem = [], [0], [], []
     m2_buf, m2_off, m2_y, m2_ov, m2_call = [], [0], [], [], []
 
-    for ci, r in enumerate(recs):
-        try:
-            x = _read_all(audio_dir / (r["stem"] + ".wav"))
-        except Exception:
-            continue
-        utts = r["utterances"]
+    jobs = [(r, audio_dir, caller_sec, max_utt_per_call, max_utt_sec, seed + i)
+            for i, r in enumerate(recs)]
+    print(f"[pack] {split}: {len(jobs)} 통화, workers={workers}", flush=True)
 
-        # --- M1: 신고자 구간 이어붙이기 ---
-        chunks, tot = [], 0
-        for u in utts:
-            if u["speaker"] != 1:
+    with ProcessPoolExecutor(max_workers=workers) as ex:
+        for ci, res in enumerate(ex.map(_pack_one, jobs, chunksize=8)):
+            if res is None:
                 continue
-            seg = _slice(x, u["startAt"], u["endAt"])
-            if len(seg) < 400:
-                continue
-            chunks.append(seg)
-            tot += len(seg)
-            if tot >= caller_sec * SR:
-                break
-        if chunks:
-            cat = np.concatenate(chunks)[: int(caller_sec * SR)]
-            m1_buf.append(cat)
-            m1_off.append(m1_off[-1] + len(cat))
-            m1_y.append(1 if r["gender"] == "M" else 0)
-            m1_stem.append(r["stem"])
-
-        # --- M2: 발화 조각 (통화당 균등 샘플) ---
-        cand = []
-        for j, u in enumerate(utts):
-            seg = _slice(x, u["startAt"], u["endAt"], max_sec=max_utt_sec)
-            if len(seg) < 400:
-                continue
-            ov = any(b["startAt"] < u["endAt"] and b["endAt"] > u["startAt"]
-                     and b["speaker"] != u["speaker"] for k, b in enumerate(utts) if k != j)
-            cand.append((seg, int(u["speaker"]), int(ov)))
-        if len(cand) > max_utt_per_call:
-            pick = rng.choice(len(cand), size=max_utt_per_call, replace=False)
-            cand = [cand[i] for i in sorted(pick)]
-        for seg, spk, ov in cand:
-            m2_buf.append(seg)
-            m2_off.append(m2_off[-1] + len(seg))
-            m2_y.append(spk)
-            m2_ov.append(ov)
-            m2_call.append(ci)
-
-        if (ci + 1) % 500 == 0:
-            print(f"  {split} {ci+1}/{len(recs)}", flush=True)
+            m1, cand = res
+            if m1 is not None:
+                cat, y, stem = m1
+                m1_buf.append(cat)
+                m1_off.append(m1_off[-1] + len(cat))
+                m1_y.append(y)
+                m1_stem.append(stem)
+            for seg, spk, ov in cand:
+                m2_buf.append(seg)
+                m2_off.append(m2_off[-1] + len(seg))
+                m2_y.append(spk)
+                m2_ov.append(ov)
+                m2_call.append(ci)
+            if (ci + 1) % 500 == 0:
+                print(f"  {split} {ci+1}/{len(recs)}", flush=True)
 
     p1 = BUNDLE / f"m1_audio_{split}.npz"
     np.savez(p1, audio=np.concatenate(m1_buf), offsets=np.array(m1_off, dtype=np.int64),
@@ -135,7 +175,7 @@ def pack_audio(split, n_calls, caller_sec, max_utt_per_call, max_utt_sec, seed=0
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--what", default="all", choices=["all", "m3", "audio"])
+    ap.add_argument("--what", default="all", choices=["all", "src", "m3", "audio"])
     ap.add_argument("--train-calls", type=int, default=4000)
     ap.add_argument("--val-calls", type=int, default=1200)
     ap.add_argument("--caller-sec", type=float, default=10.0,
@@ -146,6 +186,8 @@ if __name__ == "__main__":
                     help="M2: 발화 조각 최대 길이(초)")
     a = ap.parse_args()
 
+    if a.what in ("all", "src"):
+        pack_src()
     if a.what in ("all", "m3"):
         pack_m3()
     if a.what in ("all", "audio"):

@@ -28,11 +28,21 @@ from ..common.paths import CACHE, CKPT
 
 
 def call_normalize(X, call_id):
-    """통화별 평균을 빼서 채널 차이를 상대화한다. (원본과 잔차를 함께 반환)"""
+    """통화별 평균을 빼서 채널 차이를 상대화한다.
+
+    같은 통화 안에서 대원과 신고자의 채널이 다르므로, 통화 평균을 빼면 각 발화가
+    "이 통화의 평균 대비 어느 쪽인가"로 바뀐다. 통화마다 다른 회선 품질·녹음 음량은
+    평균에 흡수돼 사라지고, 두 화자의 상대 차이만 남는다.
+
+    ablation 실측: 원본만 0.8638 -> 원본+정규화 0.8799. 이득이 중첩 구간에 몰린다(+2.3p).
+    """
     Xn = X.copy()
+    # 같은 call_id 끼리 연속 블록이 되도록 정렬한 인덱스를 만든다 (stable: 원래 순서 보존).
     order = np.argsort(call_id, kind="stable")
     cid = call_id[order]
+    # 정렬된 call_id 에서 값이 바뀌는 위치가 곧 통화 경계다.
     bounds = np.flatnonzero(np.diff(cid)) + 1
+    # np.split 은 order 를 통화별 인덱스 묶음으로 쪼갠다. sl 은 한 통화의 발화 인덱스들.
     for sl in np.split(order, bounds):
         Xn[sl] = X[sl] - X[sl].mean(axis=0, keepdims=True)
     return Xn

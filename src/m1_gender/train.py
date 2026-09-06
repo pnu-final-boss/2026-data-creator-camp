@@ -42,12 +42,16 @@ def load():
 
 def run(models=("logreg", "rf", "hgb"), save=True):
     tr, va = load()
+    # call_X: 통화당 1행. 신고자(speaker==1) 구간만 이어붙여 뽑은 143차원 특징.
+    # call_g: 0=여성, 1=남성.
     Xtr, ytr = tr["call_X"], tr["call_g"]
     Xva, yva = va["call_X"], va["call_g"]
     names = list(tr["feat_names"])
+    # 무성음만 있는 통화는 F0 통계가 nan 이 될 수 있다. sklearn 은 nan 을 못 받으므로 0 으로 채운다.
     Xtr = np.nan_to_num(Xtr, nan=0.0, posinf=0.0, neginf=0.0)
     Xva = np.nan_to_num(Xva, nan=0.0, posinf=0.0, neginf=0.0)
 
+    # 다수클래스 정확도 = 아무것도 학습하지 않았을 때의 하한선. 모든 결과를 이것과 비교한다.
     majority = max(np.mean(yva == 0), np.mean(yva == 1))
     print(f"[m1] train={Xtr.shape} val={Xva.shape}  다수클래스 baseline acc={majority:.4f}")
 
@@ -69,9 +73,15 @@ def run(models=("logreg", "rf", "hgb"), save=True):
     print(f"[m1] best = {m} (acc={best_acc:.4f})")
 
     # 특징 중요도 (F0 가 실제로 1등인지 확인)
+    # 트리 모델은 feature_importances_, 선형 모델은 표준화된 특징의 |계수| 를 쓴다.
     imp = None
     if hasattr(clf, "feature_importances_"):
         imp = clf.feature_importances_
+    else:
+        est = clf[-1] if hasattr(clf, "__getitem__") else clf
+        if hasattr(est, "coef_"):
+            imp = np.abs(est.coef_).ravel()
+            imp = imp / imp.sum()
     if imp is not None:
         order = np.argsort(imp)[::-1][:15]
         print("[m1] top features:", [(names[i], round(float(imp[i]), 4)) for i in order[:8]])

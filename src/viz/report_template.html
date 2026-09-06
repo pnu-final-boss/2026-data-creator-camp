@@ -1,0 +1,280 @@
+<title>DCC 베이스라인 실측 결과</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#F5F7F9; --surface:#FFFFFF; --surface-2:#EEF2F6;
+    --ink:#16202B; --ink-2:#37454F; --muted:#5D6C7B; --line:#DCE3EA; --line-2:#C4CFD9;
+    --accent:#1B5E96; --accent-soft:#E7F0F8;
+    --warn:#8F5405; --danger:#9E2B22; --ok:#2A6B48;
+    --sans:"IBM Plex Sans KR","Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;
+    --mono:"IBM Plex Mono","Consolas",ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0E1419; --surface:#151D25; --surface-2:#1B242D;
+      --ink:#DFE7EE; --ink-2:#C2CEDA; --muted:#93A3B2; --line:#26313B; --line-2:#33414E;
+      --accent:#74AEE2; --accent-soft:#15283A;
+      --warn:#D79B4A; --danger:#E08A80; --ok:#6FB98B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0E1419; --surface:#151D25; --surface-2:#1B242D;
+    --ink:#DFE7EE; --ink-2:#C2CEDA; --muted:#93A3B2; --line:#26313B; --line-2:#33414E;
+    --accent:#74AEE2; --accent-soft:#15283A;
+    --warn:#D79B4A; --danger:#E08A80; --ok:#6FB98B;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.68;font-size:15px;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px 96px}
+
+  header.top{border-bottom:2px solid var(--ink);padding:40px 0 18px;margin-bottom:32px}
+  .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+          color:var(--accent);font-weight:600;margin:0 0 12px}
+  h1{font-size:clamp(27px,4.2vw,38px);font-weight:700;letter-spacing:-.02em;line-height:1.18;
+     margin:0 0 12px;text-wrap:balance}
+  .dek{font-size:16.5px;color:var(--ink-2);max-width:70ch;margin:0 0 24px}
+
+  .scores{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+          border:1px solid var(--line);background:var(--surface)}
+  .scores > div{padding:16px 18px;border-right:1px solid var(--line)}
+  .scores > div:last-child{border-right:0}
+  .scores .m{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+             color:var(--muted);margin-bottom:6px}
+  .scores .v{font-family:var(--mono);font-size:30px;font-weight:600;letter-spacing:-.02em;
+             font-variant-numeric:tabular-nums;line-height:1.1;color:var(--accent)}
+  .scores .b{font-size:12.5px;color:var(--muted);margin-top:5px;font-variant-numeric:tabular-nums}
+
+  section{margin-top:52px}
+  .sec-head{display:flex;align-items:baseline;gap:13px;border-bottom:1px solid var(--line-2);
+            padding-bottom:9px;margin-bottom:20px}
+  .tag{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.08em;
+       background:var(--accent);color:var(--surface);padding:3px 8px;flex:none}
+  h2{font-size:21px;font-weight:600;letter-spacing:-.015em;margin:0;text-wrap:balance}
+  .sub{font-family:var(--mono);font-size:12px;color:var(--muted);margin:-12px 0 18px}
+  h3{font-size:15.5px;font-weight:600;margin:26px 0 9px}
+  p{margin:0 0 14px;max-width:76ch}
+  ul{margin:0 0 14px;padding-left:20px;max-width:76ch}
+  li{margin-bottom:7px}
+  code{font-family:var(--mono);font-size:.88em;background:var(--surface-2);padding:1px 5px;border-radius:2px}
+  strong{font-weight:600}
+  a{color:var(--accent)}
+
+  figure{margin:0 0 20px;border:1px solid var(--line);background:var(--surface);padding:14px}
+  figure img{display:block;width:100%;height:auto}
+  figcaption{font-size:12.5px;color:var(--muted);margin-top:11px;padding-top:10px;
+             border-top:1px solid var(--line);max-width:none}
+
+  .tw{overflow-x:auto;margin:0 0 18px;border:1px solid var(--line);background:var(--surface)}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:13.5px}
+  th{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+     color:var(--muted);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line-2);
+     background:var(--surface-2);white-space:nowrap}
+  td{padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+  .good{color:var(--ok);font-weight:600}
+  .bad{color:var(--danger);font-weight:600}
+
+  .note{border-left:3px solid var(--line-2);padding:2px 0 2px 16px;margin:0 0 16px;max-width:76ch}
+  .note.warn{border-left-color:var(--warn)}
+  .note.stop{border-left-color:var(--danger)}
+  .note.ok{border-left-color:var(--ok)}
+  .note .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+             font-weight:600;display:block;margin-bottom:4px;color:var(--muted)}
+  .note.warn .lbl{color:var(--warn)} .note.stop .lbl{color:var(--danger)} .note.ok .lbl{color:var(--ok)}
+  .note p:last-child{margin-bottom:0}
+
+  pre{font-family:var(--mono);font-size:12.5px;line-height:1.6;background:var(--surface);
+      border:1px solid var(--line);padding:15px 17px;overflow-x:auto;margin:0 0 18px}
+  footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);
+         font-size:12.5px;color:var(--muted);max-width:76ch}
+  @media (max-width:640px){.wrap{padding:0 18px 64px} .scores > div{border-right:0;border-bottom:1px solid var(--line)}}
+</style>
+
+<div class="wrap">
+
+<header class="top">
+  <p class="kicker">Data+AI Creator Camp · 대학부 예선 · 베이스라인 실측</p>
+  <h1>세 미션 CPU 베이스라인 실측 결과</h1>
+  <p class="dek">GPU 없이 <code>wave + numpy + scipy</code> 로 특징을 직접 뽑고 얕은 분류기를 얹었다.
+  전부 공식 Validation(3,640통)에서 측정했고, Validation은 학습·튜닝 어디에도 쓰지 않았다.
+  세 미션 모두 다수클래스 기준선을 크게 넘었지만, 미션마다 막힌 지점이 서로 다르다.</p>
+  <div class="scores">
+    <div><div class="m">M1 · 성별 Accuracy</div><div class="v">0.9434</div>
+      <div class="b">기준선 0.5382 → <span class="good">+40.5p</span></div></div>
+    <div><div class="m">M2 · 화자역할 Accuracy</div><div class="v">0.8799</div>
+      <div class="b">기준선 0.5190 → <span class="good">+36.1p</span></div></div>
+    <div><div class="m">M3 · 증상 Macro-F1</div><div class="v">0.5848</div>
+      <div class="b">기준선 0.0000 (전부 음성 예측 시)</div></div>
+  </div>
+</header>
+
+<section>
+  <div class="sec-head"><span class="tag">개요</span><h2>무엇을 어떻게 돌렸나</h2></div>
+  <div class="tw"><table>
+    <thead><tr><th>미션</th><th>모델</th><th>학습 규모</th><th>Validation</th><th>결과</th></tr></thead>
+    <tbody>
+      <tr><td><strong>M1</strong> 성별</td>
+        <td>MFCC·F0·스펙트럼 143차원 → Logistic Regression</td>
+        <td class="num">6,000 통화</td><td class="num">3,640 통화</td>
+        <td class="num">acc 0.9434 / AUC 0.983</td></tr>
+      <tr><td><strong>M2</strong> 화자역할</td>
+        <td>동일 143차원 + 통화별 평균차감 286차원 → HistGradientBoosting</td>
+        <td class="num">182,597 발화</td><td class="num">111,947 발화</td>
+        <td class="num">acc 0.8799 / AUC 0.959</td></tr>
+      <tr><td><strong>M3</strong> 증상</td>
+        <td>TF-IDF char 2–4gram + word 1–2gram (267k) → OvR LogReg</td>
+        <td class="num">26,280 통화</td><td class="num">3,640 통화</td>
+        <td class="num">macro-F1 0.5848</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note ok">
+    <span class="lbl">GPU 없이 여기까지</span>
+    <p>이 PC에는 NVIDIA GPU가 없다. librosa·torch 없이 <code>wave</code>+numpy+scipy로 log-mel /
+    MFCC / 자기상관 F0를 직접 구현해, 33.7 GB 원본에서 특징을 한 번만 뽑아 캐시하는 방식으로
+    전 과정을 CPU에서 끝냈다. 이 숫자들이 앞으로 모든 GPU 실험이 넘어야 할 기준선이다.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="tag">M1</span><h2>신고자 성별 — 사실상 풀렸다</h2></div>
+  <p class="sub">선행연구 대응: griko/voice-gender-classification (임베딩 + 얕은 분류기) 구조를 CPU 특징으로 대체</p>
+  <figure>
+    <img src="{{FIG:m1_gender.png}}" alt="Mission 1 혼동행렬, ROC 곡선, 특징 중요도">
+    <figcaption>왼쪽부터 혼동행렬 · ROC · 상위 특징. 파란 막대가 F0(기본주파수) 계열이다.</figcaption>
+  </figure>
+  <p>여성 95.7%, 남성 92.7%로 균형이 좋고 AUC 0.983이다. 남성을 여성으로 오분류한 122건이
+  가장 큰 오차 덩어리인데, 고음역 남성 화자와 F0 추정의 옥타브 오류가 섞여 있을 것으로 보인다.</p>
+  <div class="note ok">
+    <span class="lbl">가설 검증됨</span>
+    <p>상위 4개 특징이 전부 F0 계열이었다 — <code>f0_std</code>, <code>logf0_std</code>,
+    <code>logf0_mean</code>, <code>f0_mean</code>. 성별의 1차 단서가 기본주파수라는 선행연구의
+    전제가 8 kHz 전화망 한국어에서도 그대로 성립한다. 흥미로운 건 평균보다 <strong>표준편차가
+    더 중요했다</strong>는 점으로, 억양 변동 폭 자체가 성별 신호를 담고 있음을 시사한다.</p>
+  </div>
+  <p>모델 비교에서 Logistic Regression(0.9434)이 RandomForest(0.9069)와 HistGradientBoosting(0.9330)을
+  모두 이겼다. 특징이 이미 잘 설계된 저차원 통계량이라 트리 모델의 비선형성이 이득 없이
+  분산만 키운 것으로 보인다.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="tag">M2</span><h2>신고자 / 119대원 — 중첩 구간이 천장을 만든다</h2></div>
+  <p class="sub">선행연구 대응: Ozan, arXiv:2106.02422 (콜센터 상담원/고객 구간 분류)</p>
+  <figure>
+    <img src="{{FIG:m2_speaker.png}}" alt="Mission 2 혼동행렬 3종과 발화 길이별 정확도">
+    <figcaption>전체 · 비중첩 · 중첩 구간을 분리한 혼동행렬과, 발화 길이 구간별 정확도.</figcaption>
+  </figure>
+  <p>text와 발화 순서를 못 쓰는 조건에서 순수 음향만으로 0.8799를 얻었다.
+  주목할 건 <strong>비대칭 오류</strong>다: 119대원을 신고자로 오분류한 경우가 8,573건인 반면
+  반대 방향은 4,873건으로, 모델이 신고자 쪽으로 치우쳐 예측한다.</p>
+  <div class="note warn">
+    <span class="lbl">예측이 맞았다</span>
+    <p>사전 조사에서 지적한 <strong>37% 중첩 문제</strong>가 실제 성능에 그대로 나타났다.
+    비중첩 구간 0.8944 vs 중첩 구간 0.8550으로 <strong>3.9포인트 차이</strong>다.
+    중첩 구간에서 신고자 재현율이 94.4% → 86.7%로 떨어지는데, 상대 발화 위에 얹힌 맞장구가
+    두 화자의 음향을 섞어버리기 때문이다.</p>
+  </div>
+  <p>발화 길이별로 보면 0.5–1초 구간에서 0.83, 5초 초과에서 0.97로 단조 증가한다.
+  짧은 맞장구("예", "네")가 오류의 대부분을 차지한다는 뜻이고, 이는 중첩 문제와 같은 뿌리다 —
+  맞장구는 짧고 동시에 겹친다.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="tag">M3</span><h2>증상 인식 — 오심 한 클래스가 macro-F1을 끌어내린다</h2></div>
+  <p class="sub">선행연구 대응: 권수정 외(2020) 119 신고 전사문 TF-IDF + 선형모델</p>
+  <figure>
+    <img src="{{FIG:m3_confusion_per_class.png}}" alt="Mission 3 클래스별 2x2 혼동행렬 9개">
+    <figcaption>9개 클래스 각각의 2×2 혼동행렬. macro-F1은 이 9개 F1의 단순 평균이다(출제 PDF 10쪽 정의).</figcaption>
+  </figure>
+  <div class="tw"><table>
+    <thead><tr><th>증상</th><th>F1</th><th>Precision</th><th>Recall</th><th>해석</th></tr></thead>
+    <tbody>
+      <tr><td>열상</td><td class="num good">0.846</td><td class="num">0.863</td><td class="num">0.829</td>
+        <td>"찢어졌다 / 베였다"가 그대로 등장 — 표층 어휘와 라벨이 일치</td></tr>
+      <tr><td>복통</td><td class="num">0.768</td><td class="num">0.831</td><td class="num">0.715</td>
+        <td>"배가 아파요" 직접 표현</td></tr>
+      <tr><td>고열</td><td class="num">0.657</td><td class="num">0.702</td><td class="num">0.618</td><td>"열이 나요"</td></tr>
+      <tr><td>어지러움</td><td class="num">0.617</td><td class="num">0.648</td><td class="num">0.588</td><td>—</td></tr>
+      <tr><td>호흡곤란</td><td class="num">0.610</td><td class="num">0.673</td><td class="num">0.557</td><td>"숨을 못 쉬어요"</td></tr>
+      <tr><td>전신쇠약</td><td class="num">0.541</td><td class="num">0.477</td><td class="num">0.624</td><td>표현이 다양해 정밀도 저하</td></tr>
+      <tr><td>구토</td><td class="num">0.487</td><td class="num">0.500</td><td class="num">0.475</td><td>오심과 분리 실패</td></tr>
+      <tr><td>두통</td><td class="num">0.438</td><td class="num">0.472</td><td class="num">0.409</td><td>"머리가 아프다"가 어지러움과 뒤섞임</td></tr>
+      <tr><td>오심</td><td class="num bad">0.300</td><td class="num bad">0.200</td><td class="num">0.599</td>
+        <td><strong>FP 1,028건</strong> — 거의 모든 통화에 오심을 붙인다</td></tr>
+    </tbody>
+  </table></div>
+  <figure>
+    <img src="{{FIG:m3_label_confusion.png}}" alt="증상 라벨 간 혼동 히트맵">
+    <figcaption>정답이 행(i)일 때 모델이 열(j)을 예측한 비율(%). 오심 열이 전 구간에서 진하다.</figcaption>
+  </figure>
+  <div class="note stop">
+    <span class="lbl">병목의 정체</span>
+    <p><strong>오심(nausea)은 신고자가 입으로 말하는 단어가 아니다.</strong> 통화에서는
+    "울렁거려요", "토할 것 같아요"로 나오고, 어노테이터가 이를 임상 용어로 옮긴 것이다.
+    표층 n-gram으로는 구토와 분리할 근거가 없어, 모델은 구토 정답의 58%, 어지러움의 60%,
+    복통의 42%에서 오심을 함께 예측한다. macro-F1은 클래스별 단순 평균이므로
+    이 한 클래스가 전체를 <strong>약 0.03 끌어내린다</strong>.</p>
+    <p>바꿔 말하면 M3 개선의 최대 지렛대는 모델 크기가 아니라 <strong>오심/구토 쌍의
+    의미적 분리</strong>다. 문맥을 보는 PLM(KLUE-RoBERTa, Kc-ELECTRA)이 여기서 이득을 낼 여지가 가장 크다.</p>
+  </div>
+  <figure>
+    <img src="{{FIG:m3_per_class.png}}" alt="클래스별 P/R/F1 막대그래프와 클래스 빈도">
+    <figcaption>왼쪽 클래스별 Precision/Recall/F1, 오른쪽 Validation 내 양성 샘플 수.
+    빈도와 성능이 비례하지 않는다 — 열상은 빈도가 낮은데도 F1이 가장 높다.</figcaption>
+  </figure>
+  <div class="note warn">
+    <span class="lbl">사전 예상이 빗나간 부분</span>
+    <p>사전 조사에서 "클래스별 임계값 튜닝만으로 macro-F1이 수 포인트 오른다"고 적었으나,
+    실측은 <strong>+0.0001</strong>에 그쳤다(0.5847 → 0.5848). <code>class_weight='balanced'</code>가
+    이미 결정경계를 옮겨놓아 임계값이 할 일이 남지 않았기 때문이다. 두 기법은 더해지지 않고
+    같은 자리를 다툰다.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="tag">재현</span><h2>돌리는 법</h2></div>
+  <pre><code>pip install -r requirements.txt
+
+python -m src.common.labels                                   # 라벨 캐시 (32,840건)
+python -m src.preprocess.extract_audio --split val            # 오디오 특징 → cache/
+python -m src.preprocess.extract_audio --split train --n 6000
+
+python -m src.m1_gender.train      # acc 0.9434
+python -m src.m2_speaker.train     # acc 0.8799
+python -m src.m3_symptom.train     # macro-F1 0.5848
+
+python -m src.viz.plots            # 혼동행렬 → figs/
+python -m src.viz.summary          # 집계 → outputs/results_summary.json
+python -m src.viz.make_report      # 이 문서 재생성</code></pre>
+  <p>오디오 특징 추출이 가장 오래 걸린다(통화당 약 2.5초, 12코어 병렬). 한 번 뽑으면
+  <code>cache/audio_*.npz</code>에 남아 이후 학습은 수 분 내로 끝난다.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="tag">다음</span><h2>여기서 어디로</h2></div>
+  <ul>
+    <li><strong>M3에 PLM을 올린다 (우선순위 1).</strong> 오심/구토 분리가 최대 지렛대이고,
+      텍스트 번들이 14 MB라 Colab 전송 비용이 사실상 없다. KLUE-RoBERTa 3 epoch은 T4에서 20~30분.</li>
+    <li><strong>M2는 중첩 구간을 따로 다룬다.</strong> 비중첩만으로 학습해 라벨 노이즈를 제거하거나,
+      중첩 여부를 입력 특징으로 주는 두 갈래를 비교한다. 중첩 판정은 startAt/endAt만으로 계산되므로
+      추론 시에도 규정상 사용 가능하다.</li>
+    <li><strong>M1은 이미 0.943이라 투자 대비 효과가 가장 낮다.</strong> wav2vec2 파인튜닝으로
+      0.96~0.97까지는 가겠지만, 같은 GPU 시간을 M3에 쓰는 편이 총점에 유리하다.</li>
+    <li><strong>8 kHz 협대역은 GPU로 옮겨도 그대로 남는 제약이다.</strong> wav2vec2/AST는 16 kHz
+      광대역 사전학습이라 단순 업샘플로는 성능이 깎인다. 먼저 그대로 돌려 기준을 잡고,
+      필요하면 대역확장을 붙이는 순서가 맞다.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>모든 수치는 공식 Validation 3,640통에서 측정했다. M3의 클래스별 임계값은 Training에서 떼어낸
+  dev 10%(2,920통)에서만 튜닝했고 Validation은 학습·튜닝 어디에도 쓰지 않았다.
+  M1/M2는 Training 29,200통 중 6,000통을 무작위 추출해 학습했으므로(seed 고정),
+  전량 학습 시 소폭 상승 여지가 있다. macro-F1은 출제 PDF 10쪽의 4단계 절차를
+  <code>src/common/metrics.py</code>에 그대로 구현해 계산했다.</p>
+</footer>
+
+</div>
