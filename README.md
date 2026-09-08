@@ -1,3 +1,9 @@
+# High Score per Mission(baseline)
+- mission 1 : 0.9434
+- mission 2 : 0.885
+- mission 3 : 0.64
+
+
 # 2026 Data Creator Camp
 
 Shared code for the three university preliminary missions.
