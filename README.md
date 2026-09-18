@@ -38,7 +38,7 @@ Mission 3에서는 119 통화의 전사문을 읽고 다음 9개 증상이 있�
 
 Macro-F1은 9개 증상별 F1 점수를 같은 비중으로 평균한 지표이며, 단순한 통화 정답률과는 다릅니다. 현재 설정에서는 공유 모델이 가장 높은 내부 점수를 기록했습니다. 전문가 모델은 일부 증상에서 소폭 개선됐지만, 전체 평균 성능 향상으로 이어지지는 않았습니다.
 
-실험 설정, 증상별 성능, 에포크별 관찰, 오분류 분석은 [Mission 3 실험 정리](docs/reports/mission3/MISSION3_EXPERIMENT_SUMMARY.md)에서 확인할 수 있습니다.
+실험 설정, 증상별 성능, 에포크별 관찰, 오분류 분석은 [Mission 3 실험 정리](docs/reports/mission3/MISSION3_EXPERIMENT_SUMMARY.md)에서 확인할 수 있습니다. 최신 A100 공유 모델 실행 결과는 [A100 실행 결과](docs/reports/mission3/A100_V1_RUN.md)에 정리했습니다.
 
 > Mission 3 점수는 제공된 Training 데이터에서 분리한 내부 holdout 평가 결과입니다. 공식 대회 점수나 실제 현장 적용 성능을 의미하지 않습니다.
 
