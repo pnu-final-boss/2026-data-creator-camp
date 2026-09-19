@@ -16,6 +16,10 @@ cache/
 # ---- 대회 제출물 (용량 크고 재생성 가능) ----
 ckpt/
 outputs/
+!outputs/
+outputs/*
+!outputs/m1_v2/
+!outputs/m1_v2/**
 figs/
 
 # ---- 파이썬 ----

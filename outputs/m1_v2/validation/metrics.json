@@ -1,0 +1,18 @@
+{
+  "accuracy": 0.9873626373626374,
+  "macro_f1": 0.9872916757744002,
+  "auc": 0.9964650104051558,
+  "confusion_matrix": [
+    [
+      1933,
+      26
+    ],
+    [
+      20,
+      1661
+    ]
+  ],
+  "calls": 3640,
+  "threshold": 0.5,
+  "empty_or_unusable_calls": 0
+}

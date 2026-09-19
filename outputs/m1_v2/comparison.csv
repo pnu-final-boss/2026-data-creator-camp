@@ -1,0 +1,3 @@
+model,accuracy
+Historical MFCC/F0 + LogisticRegression,0.9434065934065934
+WavLM v2 (this run),0.9873626373626374

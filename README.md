@@ -70,3 +70,21 @@ notebooks/       colab_m3_klue.ipynb  colab_m1m2_wav2vec2.ipynb
 
 `src/common/audio.py` 는 torch/librosa 없이 `wave`+numpy+scipy 로 log-mel / MFCC / F0(자기상관)를
 계산한다. GPU 없는 환경에서 베이스라인을 돌리기 위한 선택이다.
+
+## M1 WavLM v2 실행 결과
+
+GPU 학습을 완료한 실행 노트북과 재현 가능한 평가 산출물을 추가했다.
+
+- 실행 노트북: `notebooks/m1_v2_linux_r5.ipynb`
+- 결과와 시각화: `outputs/m1_v2/`
+- 고정 라이브러리 버전: `requirements-m1.txt`
+- 최고 가중치와 전체 재현용 묶음: GitHub Release `m1-v2-20260919`
+
+| 평가 데이터 | Accuracy | Macro-F1 | AUC | 통화 수 |
+|---|---:|---:|---:|---:|
+| 내부 dev | 0.988356 | 0.988288 | 0.997495 | 5,840 |
+| 공식 validation | 0.987363 | 0.987292 | 0.996465 | 3,640 |
+
+선택된 최고 가중치는 epoch 4의 `best.pt`이며, 공식 validation 혼동행렬은
+`[[1933, 26], [20, 1661]]` (`F=0`, `M=1`)이다. 원본 음성 및 개인정보가
+포함된 라벨 데이터는 저장소와 Release에 포함하지 않는다.
