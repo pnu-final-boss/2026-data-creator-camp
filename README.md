@@ -26,18 +26,19 @@
 ## 로컬 실행 (CPU)
 
 ```bash
-pip install -r requirements.txt
+uv venv
+uv pip install -r requirements.txt
 
-python -m src.common.labels                                  # 라벨 캐시 생성
-python -m src.preprocess.extract_audio --split val           # 오디오 특징 추출
-python -m src.preprocess.extract_audio --split train --n 6000
+uv run python -m src.common.labels                                  # 라벨 캐시 생성
+uv run python -m src.preprocess.extract_audio --split val           # 오디오 특징 추출
+uv run python -m src.preprocess.extract_audio --split train --n 6000
 
-python -m src.m3_symptom.train        # 텍스트 → 증상
-python -m src.m1_gender.train         # 음성 → 성별
-python -m src.m2_speaker.train        # 발화 조각 → 화자 역할
+uv run python -m src.m3_symptom.train        # 텍스트 → 증상
+uv run python -m src.m1_gender.train         # 음성 → 성별
+uv run python -m src.m2_speaker.train        # 발화 조각 → 화자 역할
 
-python -m src.viz.plots               # 혼동행렬 등 그림 → figs/
-python -m src.viz.summary             # 결과 집계 → outputs/results_summary.json
+uv run python -m src.viz.plots               # 혼동행렬 등 그림 → figs/
+uv run python -m src.viz.summary             # 결과 집계 → outputs/results_summary.json
 ```
 
 ## Colab GPU 학습
@@ -47,8 +48,8 @@ python -m src.viz.summary             # 결과 집계 → outputs/results_summar
 
 ```bash
 # 1) 로컬에서 업로드 번들 생성
-python -m src.preprocess.pack_for_colab --what m3      # m3_text.json.gz  (14 MB)
-python -m src.preprocess.pack_for_colab --what audio   # m1/m2 오디오 npz
+uv run python -m src.preprocess.pack_for_colab --what m3      # m3_text.json.gz  (14 MB)
+uv run python -m src.preprocess.pack_for_colab --what audio   # m1/m2 오디오 npz
 
 # 2) cache/colab/ 의 파일을 Google Drive 의 MyDrive/dcc/ 에 업로드
 # 3) notebooks/*.ipynb 를 Colab(또는 VS Code + google.colab 확장)에서 실행
@@ -75,10 +76,11 @@ notebooks/       colab_m3_klue.ipynb  colab_m1m2_wav2vec2.ipynb
 
 GPU 학습을 완료한 실행 노트북과 재현 가능한 평가 산출물을 추가했다.
 
-- 실행 노트북: `notebooks/m1_v2_linux_r5.ipynb`
-- 결과와 시각화: `outputs/m1_v2/`
-- 고정 라이브러리 버전: `requirements-m1.txt`
-- 최고 가중치와 전체 재현용 묶음: GitHub Release `m1-v2-20260919`
+- [실행 노트북과 결과 저장 안내](notebooks/m1_v2/README.md)
+- [실행 출력이 포함된 노트북](notebooks/m1_v2/m1_v2_linux_r5.ipynb)
+- [평가 지표·예측·시각화](outputs/m1_v2/)
+- [고정 라이브러리 버전](requirements-m1.txt)
+- [최고 가중치와 전체 재현용 묶음](https://github.com/pnu-final-boss/2026-data-creator-camp/releases/tag/m1-v2-20260919)
 
 | 평가 데이터 | Accuracy | Macro-F1 | AUC | 통화 수 |
 |---|---:|---:|---:|---:|
@@ -88,3 +90,11 @@ GPU 학습을 완료한 실행 노트북과 재현 가능한 평가 산출물을
 선택된 최고 가중치는 epoch 4의 `best.pt`이며, 공식 validation 혼동행렬은
 `[[1933, 26], [20, 1661]]` (`F=0`, `M=1`)이다. 원본 음성 및 개인정보가
 포함된 라벨 데이터는 저장소와 Release에 포함하지 않는다.
+
+학교 서버의 새 실행 결과는 다음 명령으로 체크포인트와 원본 데이터를 제외하고 저장소에 내보낸다.
+
+```bash
+uv run python scripts/export_m1_v2_results.py \
+  /home/a202355692/data/runs/m1_v2/<run_id> \
+  --output outputs/m1_v2
+```

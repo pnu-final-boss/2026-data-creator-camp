@@ -21,7 +21,7 @@ validation confusion matrix is `[[1933, 26], [20, 1661]]` for labels `F=0` and
 - dev and official-validation metrics and predictions
 - confusion matrices, ROC/PR plots, duration reports, and error tables
 - `config.json`, `environment.json`, and `provenance.json`
-- the fully executed notebook at `../../notebooks/m1_v2_linux_r5.ipynb`
+- the fully executed notebook at `../../notebooks/m1_v2/m1_v2_linux_r5.ipynb`
 - exact package versions at `../../requirements-m1.txt`
 
 ## Checkpoints and full portable bundle
