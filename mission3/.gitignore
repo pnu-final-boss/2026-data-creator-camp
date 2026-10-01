@@ -1,0 +1,6 @@
+# 4.5GB 앙상블 가중치는 GitHub 용량 한도를 넘으므로 저장소에 올리지 않는다
+*.pt
+# 원본 데이터에서 만든 예측 CSV는 저장소 정책상 올리지 않는다
+results/*.csv
+__pycache__/
+member_ckpt/

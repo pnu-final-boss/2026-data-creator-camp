@@ -1,0 +1,9 @@
+# Mission 3 추론 (inference.py, mission3_model.py)
+torch==2.6.0
+transformers==5.17.0
+tokenizers==0.23.2
+sentencepiece==0.2.2
+numpy==2.4.6
+scikit-learn==1.9.0
+# 학습 노트북 실행 (mission3_train.ipynb)
+ipykernel==7.3.0
