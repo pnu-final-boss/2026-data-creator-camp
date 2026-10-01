@@ -1,0 +1,48 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:  46%|████▌     | 178/389 [00:00<00:00, 1779.68it/s]Loading weights: 100%|██████████| 389/389 [00:00<00:00, 2074.26it/s]
+[transformers] [1mXLMRobertaForSequenceClassification LOAD REPORT[0m from: xlm-roberta-large
+Key                         | Status     | 
+----------------------------+------------+-
+roberta.pooler.dense.bias   | UNEXPECTED | 
+lm_head.dense.weight        | UNEXPECTED | 
+lm_head.dense.bias          | UNEXPECTED | 
+lm_head.layer_norm.bias     | UNEXPECTED | 
+lm_head.bias                | UNEXPECTED | 
+lm_head.layer_norm.weight   | UNEXPECTED | 
+roberta.pooler.dense.weight | UNEXPECTED | 
+classifier.dense.bias       | MISSING    | 
+classifier.out_proj.weight  | MISSING    | 
+classifier.out_proj.bias    | MISSING    | 
+classifier.dense.weight     | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+epoch 1 step 100/822 loss=1.1767
+epoch 1 step 200/822 loss=1.0954
+epoch 1 step 300/822 loss=0.9978
+epoch 1 step 400/822 loss=0.9400
+epoch 1 step 500/822 loss=0.9021
+epoch 1 step 600/822 loss=0.8782
+epoch 1 step 700/822 loss=0.8565
+epoch 1 step 800/822 loss=0.8394
+{"epoch": 1, "dev": {"macro_f1": 0.6318067254687294, "micro_f1": 0.6306515186645026, "exact_match": 0.3910958904109589}}
+epoch 2 step 100/822 loss=0.6957
+epoch 2 step 200/822 loss=0.6962
+epoch 2 step 300/822 loss=0.6914
+epoch 2 step 400/822 loss=0.6914
+epoch 2 step 500/822 loss=0.6891
+epoch 2 step 600/822 loss=0.6887
+epoch 2 step 700/822 loss=0.6857
+epoch 2 step 800/822 loss=0.6833
+{"epoch": 2, "dev": {"macro_f1": 0.6443505432070844, "micro_f1": 0.6506137865911237, "exact_match": 0.4160958904109589}}
+epoch 3 step 100/822 loss=0.6109
+epoch 3 step 200/822 loss=0.6237
+epoch 3 step 300/822 loss=0.6254
+epoch 3 step 400/822 loss=0.6241
+epoch 3 step 500/822 loss=0.6260
+epoch 3 step 600/822 loss=0.6242
+epoch 3 step 700/822 loss=0.6243
+epoch 3 step 800/822 loss=0.6250
+{"epoch": 3, "dev": {"macro_f1": 0.6463112976076262, "micro_f1": 0.6566523605150214, "exact_match": 0.436986301369863}}
+saved checkpoints/mission3_xlmr.pt: dev macro F1 0.6463 at epoch 3
