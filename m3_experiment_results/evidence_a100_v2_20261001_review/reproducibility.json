@@ -1,0 +1,151 @@
+{
+  "source_signature": "723de22f4ca85ab42006170d094d9e51a175d8c5febe86c186dfbe244393074c",
+  "code_hashes": {
+    "m3_evidence/__init__.py": "61025e0a4ceebc53c0aa69c416c61d7e57106e1dc9c79124a6a1db2bdc016646",
+    "m3_evidence/data_review.py": "19a4f3d396c3841752e95535308efeeafc32ec79606234a19ddb16eaeddbb432",
+    "m3_evidence/distribution.py": "c1163799c4833bb025d241b9e521766005464d3046ae8dd435074b4c091c1fd1",
+    "m3_evidence/evaluation.py": "f63f9b119b685ee61e04d19539c11f60d687386a60ff65943a9f69b5599e2ee8",
+    "m3_evidence/export_results.py": "2ecff184ca4c5aebf5be25762bc3eae5dcd97c5ce5ec4ba884723c06d9bc74be",
+    "m3_evidence/frozen.py": "d53576636bf6ec9690d189c973d037d9f1ae7f9a6a0c4f36269ac07abed3f91c",
+    "m3_evidence/inference.py": "cc4138c0d33552e1f190f2b9eb774cc03dde885fb68e1d6911e613e203409c0e",
+    "m3_evidence/neural_baselines.py": "684189c46c653a1e8ec5d2c3953af8ca8e183b37a6d791412f5f22ce08e97e67",
+    "m3_evidence/runner.py": "7d269b8db1c45b167fd632340f1575acd8b76d8842b2ee99ded0276a23a851c0",
+    "m3_react/__init__.py": "b89a8f712aa957060ddfbc52c143507c419aa68fed2e23ef878eb5c87f08ddeb",
+    "m3_react/analysis.py": "657f6657e6aae4a151da044fef8ad457d014ccbcfc5e245d9a76cde8e856a1ae",
+    "m3_react/backends.py": "fedc1c7c6077721b776c40bc6d74c7cbdbfb00422b51ab2950f8953d0c726f9b",
+    "m3_react/core.py": "c940cc8f499784bb05f91d1e23bb1ac5b5f999945cd3cb164fa6dcc4d5c534a3",
+    "m3_react/experiment.py": "ea81411247d158a77a0570d993f9bac0fd85189922f5cda1a019250f5234788a",
+    "m3_react/frozen.py": "bf84f5019ca02d19d70c19db75f1c44e2dc584e9b69a8cf3f6abac99fd480fc3",
+    "m3_react/staged.py": "0eba5891fd3b33072a9fd54f581b86163986b50be27041370bd3d58e5cf83733"
+  },
+  "split_hashes": {
+    "train": "5a3a64841f26338e832346a47a9ec95b19222f9de0a1230357dbed08235f2f43",
+    "calibration": "c31dec4aa7e4d1092d07ab355dda2d3572f738dbd9dc7027fecab93c48793e3f",
+    "dev": "4129bfdca022fc9722d6cdee43cdd1b37f8961918d12711a2c6195d9eaf97a37"
+  },
+  "manual_sha256": "1f452016095e55efb2d435d5111a1d5517145dea0195b6506cfbe256e977dae8",
+  "sample_limits": {
+    "calibration": 512,
+    "dev": 384
+  },
+  "settings": {
+    "seed": 42,
+    "max_input_tokens": 16000,
+    "direct_output_tokens": 128,
+    "evidence_output_tokens": 1024,
+    "action_output_tokens": 128,
+    "repair_attempts": 1,
+    "max_tool_rounds": 2,
+    "review_all": true,
+    "extract_evidence": true
+  },
+  "distribution_variants": [
+    {
+      "key": "raw",
+      "config": {
+        "view": "raw",
+        "epochs": 15,
+        "seed": 42,
+        "positive_weight": "none"
+      }
+    },
+    {
+      "key": "normalized",
+      "config": {
+        "view": "normalized",
+        "epochs": 15,
+        "seed": 42,
+        "positive_weight": "none"
+      }
+    },
+    {
+      "key": "context_only",
+      "config": {
+        "view": "context_only",
+        "epochs": 15,
+        "seed": 42,
+        "positive_weight": "none"
+      }
+    },
+    {
+      "key": "normalized_sqrt",
+      "config": {
+        "view": "normalized",
+        "epochs": 15,
+        "seed": 42,
+        "positive_weight": "sqrt"
+      }
+    },
+    {
+      "key": "redacted",
+      "config": {
+        "view": "redacted",
+        "epochs": 15,
+        "seed": 42,
+        "positive_weight": "none"
+      }
+    }
+  ],
+  "fusion": {
+    "allowed": [
+      "unknown"
+    ],
+    "min_support": 10,
+    "min_gain": 0.005,
+    "alphas": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "thresholds": [
+      0.15,
+      0.25,
+      0.35,
+      0.5,
+      0.65,
+      0.75,
+      0.85
+    ]
+  },
+  "models": [
+    {
+      "key": "qwen35_4b",
+      "model_id": "Qwen/Qwen3.5-4B",
+      "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+      "enabled": true
+    },
+    {
+      "key": "exaone4_12b",
+      "model_id": "LGAI-EXAONE/EXAONE-4.0-1.2B",
+      "revision": "3abf2810673c7c0778df64a73c2d52eab32d91c4",
+      "enabled": true
+    },
+    {
+      "key": "gemma3_4b",
+      "model_id": "google/gemma-3-4b-it",
+      "revision": "093f9f388b31de276ce2de164bdc2081324b9767",
+      "enabled": true
+    },
+    {
+      "key": "qwen3_8b",
+      "model_id": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "enabled": true
+    }
+  ],
+  "no_new_inference_or_training": true,
+  "saved_runtime_seconds": 16018.482,
+  "status": "partial_results_after_protocol_failure",
+  "data_used_for_thresholds": "calibration only",
+  "data_used_for_report": "dev384",
+  "independent_integrity_checks": [
+    "manifest digest",
+    "3 split hashes",
+    "16 source hashes",
+    "6 Qwen completion markers",
+    "2688 record IDs/signatures/order",
+    "shared initial predictions and evidence",
+    "valid evidence schema and line bounds"
+  ],
+  "limit": "Old remote weight assets were not independently reloaded in this analysis."
+}

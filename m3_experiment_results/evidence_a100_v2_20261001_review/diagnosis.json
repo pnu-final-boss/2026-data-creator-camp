@@ -1,0 +1,1876 @@
+{
+  "scope": "Saved files only. Parse/schema validity is not semantic or clinical correctness.",
+  "total_records": 2696,
+  "model_call_trace_rows": 9451,
+  "unique_cache_calls": 5131,
+  "record_groups": {
+    "exaone4_12b/calibration/direct": {
+      "records": 8,
+      "fallback": 8,
+      "evidence_valid": 0,
+      "review_completed": 0,
+      "any_tool_executed": 0,
+      "tool_calls": 0,
+      "status": {
+        "evidence_failed_kept_initial": 8
+      },
+      "stop_reasons": {
+        "json_parse_error": 8
+      },
+      "final_error_details": {
+        "Expecting value: line N column N (char N)": 8
+      }
+    },
+    "qwen35_4b/calibration/direct": {
+      "records": 512,
+      "fallback": 101,
+      "evidence_valid": 411,
+      "review_completed": 0,
+      "any_tool_executed": 0,
+      "tool_calls": 0,
+      "status": {
+        "evidence_failed_kept_initial": 101,
+        "ok": 411
+      },
+      "stop_reasons": {
+        "direct_prediction": 411,
+        "json_parse_error": 3,
+        "schema_error": 98
+      },
+      "final_error_details": {
+        "Expecting ',' delimiter: line N column N (char N)": 3,
+        "evidence.clues: expected 9 entries in label order": 71,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 1,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 13,
+        "evidence[label].clue: without refs, unknown requires null": 2,
+        "evidence[label].refs: absent requires supporting transcript lines": 3,
+        "evidence[label].refs: duplicate line indices": 3,
+        "evidence[label].refs: expected an array of integer line indices": 3,
+        "evidence[label].refs: implicit requires supporting transcript lines": 2
+      }
+    },
+    "qwen35_4b/calibration/react": {
+      "records": 512,
+      "fallback": 460,
+      "evidence_valid": 411,
+      "review_completed": 52,
+      "any_tool_executed": 404,
+      "tool_calls": 455,
+      "status": {
+        "action_failed_kept_initial": 359,
+        "evidence_failed_kept_initial": 101,
+        "ok": 52
+      },
+      "stop_reasons": {
+        "json_parse_error": 3,
+        "review_completed": 52,
+        "schema_error": 457
+      },
+      "final_error_details": {
+        "Expecting ',' delimiter: line N column N (char N)": 3,
+        "action: this exact tool action has already executed; choose a new action or finish": 261,
+        "evidence.clues: expected 9 entries in label order": 71,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 1,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 13,
+        "evidence[label].clue: without refs, unknown requires null": 2,
+        "evidence[label].refs: absent requires supporting transcript lines": 3,
+        "evidence[label].refs: duplicate line indices": 3,
+        "evidence[label].refs: expected an array of integer line indices": 3,
+        "evidence[label].refs: implicit requires supporting transcript lines": 2,
+        "read_window: at most 17 lines may be requested": 88,
+        "read_window: require integer 0 <= start <= end < line_count": 10
+      }
+    },
+    "qwen35_4b/calibration/self_review": {
+      "records": 512,
+      "fallback": 101,
+      "evidence_valid": 411,
+      "review_completed": 411,
+      "any_tool_executed": 0,
+      "tool_calls": 0,
+      "status": {
+        "evidence_failed_kept_initial": 101,
+        "ok": 411
+      },
+      "stop_reasons": {
+        "json_parse_error": 3,
+        "review_completed": 411,
+        "schema_error": 98
+      },
+      "final_error_details": {
+        "Expecting ',' delimiter: line N column N (char N)": 3,
+        "evidence.clues: expected 9 entries in label order": 71,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 1,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 13,
+        "evidence[label].clue: without refs, unknown requires null": 2,
+        "evidence[label].refs: absent requires supporting transcript lines": 3,
+        "evidence[label].refs: duplicate line indices": 3,
+        "evidence[label].refs: expected an array of integer line indices": 3,
+        "evidence[label].refs: implicit requires supporting transcript lines": 2
+      }
+    },
+    "qwen35_4b/dev/direct": {
+      "records": 384,
+      "fallback": 67,
+      "evidence_valid": 317,
+      "review_completed": 0,
+      "any_tool_executed": 0,
+      "tool_calls": 0,
+      "status": {
+        "evidence_failed_kept_initial": 67,
+        "ok": 317
+      },
+      "stop_reasons": {
+        "direct_prediction": 317,
+        "schema_error": 67
+      },
+      "final_error_details": {
+        "evidence.clues: expected 9 entries in label order": 42,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 2,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 15,
+        "evidence[label].clue: without refs, unknown requires null": 1,
+        "evidence[label].refs: absent requires supporting transcript lines": 2,
+        "evidence[label].refs: duplicate line indices": 3,
+        "evidence[label].refs: expected an array of integer line indices": 1,
+        "evidence[label].refs: implicit requires supporting transcript lines": 1
+      }
+    },
+    "qwen35_4b/dev/react": {
+      "records": 384,
+      "fallback": 357,
+      "evidence_valid": 317,
+      "review_completed": 27,
+      "any_tool_executed": 312,
+      "tool_calls": 339,
+      "status": {
+        "action_failed_kept_initial": 290,
+        "evidence_failed_kept_initial": 67,
+        "ok": 27
+      },
+      "stop_reasons": {
+        "review_completed": 27,
+        "schema_error": 357
+      },
+      "final_error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 203,
+        "evidence.clues: expected 9 entries in label order": 42,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 2,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 15,
+        "evidence[label].clue: without refs, unknown requires null": 1,
+        "evidence[label].refs: absent requires supporting transcript lines": 2,
+        "evidence[label].refs: duplicate line indices": 3,
+        "evidence[label].refs: expected an array of integer line indices": 1,
+        "evidence[label].refs: implicit requires supporting transcript lines": 1,
+        "read_window: at most 17 lines may be requested": 80,
+        "read_window: require integer 0 <= start <= end < line_count": 7
+      }
+    },
+    "qwen35_4b/dev/self_review": {
+      "records": 384,
+      "fallback": 67,
+      "evidence_valid": 317,
+      "review_completed": 317,
+      "any_tool_executed": 0,
+      "tool_calls": 0,
+      "status": {
+        "evidence_failed_kept_initial": 67,
+        "ok": 317
+      },
+      "stop_reasons": {
+        "review_completed": 317,
+        "schema_error": 67
+      },
+      "final_error_details": {
+        "evidence.clues: expected 9 entries in label order": 42,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 2,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 15,
+        "evidence[label].clue: without refs, unknown requires null": 1,
+        "evidence[label].refs: absent requires supporting transcript lines": 2,
+        "evidence[label].refs: duplicate line indices": 3,
+        "evidence[label].refs: expected an array of integer line indices": 1,
+        "evidence[label].refs: implicit requires supporting transcript lines": 1
+      }
+    }
+  },
+  "unique_calls": {
+    "exaone4_12b/calibration/evidence/0": {
+      "calls": 8,
+      "ok": 0,
+      "errors": {
+        "json_parse_error": 8
+      },
+      "error_details": {
+        "Expecting value: line N column N (char N)": 8
+      },
+      "response_shapes": {
+        "fenced/object{clues,refs,states}": 8
+      },
+      "usage": {
+        "input_tokens": 25098,
+        "output_tokens": 1207,
+        "reported_generation_seconds": 27.138854240998626,
+        "logical_charged_output_tokens": 1207,
+        "output_token_limit_count": 0
+      },
+      "structure": {
+        "clues_container": {
+          "list[15]": 1,
+          "list[8]": 3,
+          "list[9]": 4
+        },
+        "clues_entry_shape": {
+          "null": 59,
+          "object{kind,meaning}": 16
+        },
+        "refs_container": {
+          "list[3]": 1,
+          "list[6]": 1,
+          "list[7]": 1,
+          "list[8]": 1,
+          "list[9]": 4
+        },
+        "refs_entry_shape": {
+          "int": 60
+        },
+        "states_container": {
+          "list[8]": 7,
+          "list[9]": 1
+        },
+        "states_entry_shape": {
+          "str": 65
+        }
+      }
+    },
+    "exaone4_12b/calibration/evidence/1": {
+      "calls": 8,
+      "ok": 0,
+      "errors": {
+        "json_parse_error": 8
+      },
+      "error_details": {
+        "Expecting value: line N column N (char N)": 8
+      },
+      "response_shapes": {
+        "fenced/object{clues,refs,states}": 8
+      },
+      "usage": {
+        "input_tokens": 32409,
+        "output_tokens": 1305,
+        "reported_generation_seconds": 28.499559306539595,
+        "logical_charged_output_tokens": 1305,
+        "output_token_limit_count": 0
+      },
+      "structure": {
+        "clues_container": {
+          "list[13]": 1,
+          "list[8]": 3,
+          "list[9]": 4
+        },
+        "clues_entry_shape": {
+          "null": 49,
+          "object{kind,meaning}": 24
+        },
+        "refs_container": {
+          "list[2]": 1,
+          "list[6]": 1,
+          "list[7]": 1,
+          "list[8]": 3,
+          "list[9]": 2
+        },
+        "refs_entry_shape": {
+          "int": 57
+        },
+        "states_container": {
+          "list[8]": 7,
+          "list[9]": 1
+        },
+        "states_entry_shape": {
+          "str": 65
+        }
+      }
+    },
+    "exaone4_12b/calibration/initial/0": {
+      "calls": 8,
+      "ok": 8,
+      "errors": {
+        "none": 8
+      },
+      "error_details": {},
+      "response_shapes": {
+        "plain/array[9] of int": 8
+      },
+      "usage": {
+        "input_tokens": 14548,
+        "output_tokens": 224,
+        "reported_generation_seconds": 5.758277349174023,
+        "logical_charged_output_tokens": 224,
+        "output_token_limit_count": 0
+      },
+      "structure": {}
+    },
+    "qwen35_4b/calibration/action/0": {
+      "calls": 815,
+      "ok": 426,
+      "errors": {
+        "none": 426,
+        "schema_error": 389
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 368,
+        "read_window: at most 17 lines may be requested": 15,
+        "read_window: require integer 0 <= start <= end < line_count": 6
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 814,
+        "plain/object{name}": 1
+      },
+      "usage": {
+        "input_tokens": 1885844,
+        "output_tokens": 13894,
+        "reported_generation_seconds": 732.7810189966112,
+        "logical_charged_output_tokens": 13894,
+        "output_token_limit_count": 0
+      },
+      "structure": {
+        "action_names": {
+          "finish": 1,
+          "read_window": 814
+        },
+        "read_window_bounds": {
+          "out_of_range": 6,
+          "valid": 808
+        },
+        "read_window_size": {
+          "11": 2,
+          "12": 6,
+          "13": 4,
+          "15": 4,
+          "16": 3,
+          "17": 2,
+          "18": 17,
+          "19": 3,
+          "2": 771,
+          "20": 1,
+          "3": 1
+        }
+      }
+    },
+    "qwen35_4b/calibration/action/1": {
+      "calls": 389,
+      "ok": 30,
+      "errors": {
+        "none": 30,
+        "schema_error": 359
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 261,
+        "read_window: at most 17 lines may be requested": 88,
+        "read_window: require integer 0 <= start <= end < line_count": 10
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 389
+      },
+      "usage": {
+        "input_tokens": 950361,
+        "output_tokens": 6743,
+        "reported_generation_seconds": 359.53099665325135,
+        "logical_charged_output_tokens": 6743,
+        "output_token_limit_count": 0
+      },
+      "structure": {
+        "action_names": {
+          "read_window": 389
+        },
+        "read_window_bounds": {
+          "out_of_range": 10,
+          "valid": 379
+        },
+        "read_window_size": {
+          "11": 20,
+          "13": 2,
+          "15": 2,
+          "16": 3,
+          "17": 3,
+          "18": 93,
+          "2": 259,
+          "21": 2,
+          "23": 1,
+          "29": 1,
+          "34": 1,
+          "4": 1,
+          "5": 1
+        }
+      }
+    },
+    "qwen35_4b/calibration/evidence/0": {
+      "calls": 512,
+      "ok": 304,
+      "errors": {
+        "json_parse_error": 2,
+        "none": 304,
+        "schema_error": 206
+      },
+      "error_details": {
+        "Expecting ',' delimiter: line N column N (char N)": 2,
+        "evidence.clues: expected 9 entries in label order": 120,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 63,
+        "evidence[label].clue: without refs, unknown requires null": 3,
+        "evidence[label].refs: absent requires supporting transcript lines": 2,
+        "evidence[label].refs: duplicate line indices": 14,
+        "evidence[label].refs: expected an array of integer line indices": 4
+      },
+      "response_shapes": {
+        "plain/object{clues,refs,states}": 510,
+        "unparseable_json": 2
+      },
+      "usage": {
+        "input_tokens": 1559054,
+        "output_tokens": 123270,
+        "reported_generation_seconds": 4641.126020582393,
+        "logical_charged_output_tokens": 123270,
+        "output_token_limit_count": 0
+      },
+      "structure": {
+        "clues_container": {
+          "list[10]": 95,
+          "list[11]": 16,
+          "list[12]": 4,
+          "list[6]": 1,
+          "list[8]": 4,
+          "list[9]": 390
+        },
+        "clues_entry_shape": {
+          "list": 4,
+          "null": 3977,
+          "object{kind,meaning}": 741
+        },
+        "refs_container": {
+          "list[9]": 510
+        },
+        "refs_entry_shape": {
+          "list": 4590
+        },
+        "states_container": {
+          "list[9]": 510
+        },
+        "states_entry_shape": {
+          "str": 4590
+        }
+      }
+    },
+    "qwen35_4b/calibration/evidence/1": {
+      "calls": 208,
+      "ok": 107,
+      "errors": {
+        "json_parse_error": 3,
+        "none": 107,
+        "schema_error": 98
+      },
+      "error_details": {
+        "Expecting ',' delimiter: line N column N (char N)": 3,
+        "evidence.clues: expected 9 entries in label order": 71,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 1,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 13,
+        "evidence[label].clue: without refs, unknown requires null": 2,
+        "evidence[label].refs: absent requires supporting transcript lines": 3,
+        "evidence[label].refs: duplicate line indices": 3,
+        "evidence[label].refs: expected an array of integer line indices": 3,
+        "evidence[label].refs: implicit requires supporting transcript lines": 2
+      },
+      "response_shapes": {
+        "plain/object{clues,refs,states}": 205,
+        "unparseable_json": 3
+      },
+      "usage": {
+        "input_tokens": 849080,
+        "output_tokens": 54054,
+        "reported_generation_seconds": 2050.701599589549,
+        "logical_charged_output_tokens": 54054,
+        "output_token_limit_count": 0
+      },
+      "structure": {
+        "clues_container": {
+          "list[10]": 61,
+          "list[11]": 9,
+          "list[8]": 1,
+          "list[9]": 134
+        },
+        "clues_entry_shape": {
+          "null": 1532,
+          "object{kind,meaning}": 391
+        },
+        "refs_container": {
+          "list[9]": 205
+        },
+        "refs_entry_shape": {
+          "list": 1845
+        },
+        "states_container": {
+          "list[9]": 205
+        },
+        "states_entry_shape": {
+          "str": 1845
+        }
+      }
+    },
+    "qwen35_4b/calibration/final/0": {
+      "calls": 463,
+      "ok": 463,
+      "errors": {
+        "none": 463
+      },
+      "error_details": {},
+      "response_shapes": {
+        "plain/array[9] of int": 463
+      },
+      "usage": {
+        "input_tokens": 1050476,
+        "output_tokens": 13890,
+        "reported_generation_seconds": 636.5915001025423,
+        "logical_charged_output_tokens": 13890,
+        "output_token_limit_count": 0
+      },
+      "structure": {}
+    },
+    "qwen35_4b/calibration/initial/0": {
+      "calls": 512,
+      "ok": 512,
+      "errors": {
+        "none": 512
+      },
+      "error_details": {},
+      "response_shapes": {
+        "plain/array[9] of int": 512
+      },
+      "usage": {
+        "input_tokens": 974719,
+        "output_tokens": 15360,
+        "reported_generation_seconds": 675.5946811623871,
+        "logical_charged_output_tokens": 15360,
+        "output_token_limit_count": 0
+      },
+      "structure": {}
+    },
+    "qwen35_4b/dev/action/0": {
+      "calls": 629,
+      "ok": 322,
+      "errors": {
+        "none": 322,
+        "schema_error": 307
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 288,
+        "read_window: at most 17 lines may be requested": 16,
+        "read_window: require integer 0 <= start <= end < line_count": 3
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 629
+      },
+      "usage": {
+        "input_tokens": 1451245,
+        "output_tokens": 10726,
+        "reported_generation_seconds": 557.777131085284,
+        "logical_charged_output_tokens": 10726,
+        "output_token_limit_count": 0
+      },
+      "structure": {
+        "action_names": {
+          "read_window": 629
+        },
+        "read_window_bounds": {
+          "out_of_range": 3,
+          "valid": 626
+        },
+        "read_window_size": {
+          "11": 2,
+          "12": 2,
+          "13": 1,
+          "14": 1,
+          "15": 1,
+          "17": 3,
+          "18": 17,
+          "19": 1,
+          "2": 599,
+          "23": 1,
+          "3": 1
+        }
+      }
+    },
+    "qwen35_4b/dev/action/1": {
+      "calls": 307,
+      "ok": 17,
+      "errors": {
+        "none": 17,
+        "schema_error": 290
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 203,
+        "read_window: at most 17 lines may be requested": 80,
+        "read_window: require integer 0 <= start <= end < line_count": 7
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 307
+      },
+      "usage": {
+        "input_tokens": 746386,
+        "output_tokens": 5323,
+        "reported_generation_seconds": 279.6911905752495,
+        "logical_charged_output_tokens": 5323,
+        "output_token_limit_count": 0
+      },
+      "structure": {
+        "action_names": {
+          "read_window": 307
+        },
+        "read_window_bounds": {
+          "out_of_range": 7,
+          "valid": 300
+        },
+        "read_window_size": {
+          "11": 9,
+          "15": 1,
+          "17": 1,
+          "18": 85,
+          "19": 1,
+          "2": 203,
+          "23": 1,
+          "3": 2,
+          "4": 1,
+          "6": 3
+        }
+      }
+    },
+    "qwen35_4b/dev/evidence/0": {
+      "calls": 384,
+      "ok": 224,
+      "errors": {
+        "none": 224,
+        "schema_error": 160
+      },
+      "error_details": {
+        "evidence.clues: expected 9 entries in label order": 88,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 3,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 51,
+        "evidence[label].refs: absent requires supporting transcript lines": 2,
+        "evidence[label].refs: duplicate line indices": 14,
+        "evidence[label].refs: expected an array of integer line indices": 2
+      },
+      "response_shapes": {
+        "plain/object{clues,refs,states}": 384
+      },
+      "usage": {
+        "input_tokens": 1161817,
+        "output_tokens": 93951,
+        "reported_generation_seconds": 3457.210271416232,
+        "logical_charged_output_tokens": 93951,
+        "output_token_limit_count": 0
+      },
+      "structure": {
+        "clues_container": {
+          "list[10]": 72,
+          "list[11]": 16,
+          "list[9]": 296
+        },
+        "clues_entry_shape": {
+          "null": 2978,
+          "object{kind,meaning}": 582
+        },
+        "refs_container": {
+          "list[9]": 384
+        },
+        "refs_entry_shape": {
+          "list": 3456
+        },
+        "states_container": {
+          "list[9]": 384
+        },
+        "states_entry_shape": {
+          "str": 3456
+        }
+      }
+    },
+    "qwen35_4b/dev/evidence/1": {
+      "calls": 160,
+      "ok": 93,
+      "errors": {
+        "none": 93,
+        "schema_error": 67
+      },
+      "error_details": {
+        "evidence.clues: expected 9 entries in label order": 42,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 2,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 15,
+        "evidence[label].clue: without refs, unknown requires null": 1,
+        "evidence[label].refs: absent requires supporting transcript lines": 2,
+        "evidence[label].refs: duplicate line indices": 3,
+        "evidence[label].refs: expected an array of integer line indices": 1,
+        "evidence[label].refs: implicit requires supporting transcript lines": 1
+      },
+      "response_shapes": {
+        "plain/object{clues,refs,states}": 160
+      },
+      "usage": {
+        "input_tokens": 648183,
+        "output_tokens": 40410,
+        "reported_generation_seconds": 1507.6289663100615,
+        "logical_charged_output_tokens": 40410,
+        "output_token_limit_count": 0
+      },
+      "structure": {
+        "clues_container": {
+          "list[10]": 37,
+          "list[11]": 4,
+          "list[12]": 1,
+          "list[9]": 118
+        },
+        "clues_entry_shape": {
+          "null": 1216,
+          "object{kind,meaning}": 272
+        },
+        "refs_container": {
+          "list[9]": 160
+        },
+        "refs_entry_shape": {
+          "list": 1440
+        },
+        "states_container": {
+          "list[9]": 160
+        },
+        "states_entry_shape": {
+          "str": 1440
+        }
+      }
+    },
+    "qwen35_4b/dev/final/0": {
+      "calls": 344,
+      "ok": 344,
+      "errors": {
+        "none": 344
+      },
+      "error_details": {},
+      "response_shapes": {
+        "plain/array[9] of int": 344
+      },
+      "usage": {
+        "input_tokens": 776874,
+        "output_tokens": 10320,
+        "reported_generation_seconds": 463.96332780923694,
+        "logical_charged_output_tokens": 10320,
+        "output_token_limit_count": 0
+      },
+      "structure": {}
+    },
+    "qwen35_4b/dev/initial/0": {
+      "calls": 384,
+      "ok": 384,
+      "errors": {
+        "none": 384
+      },
+      "error_details": {},
+      "response_shapes": {
+        "plain/array[9] of int": 384
+      },
+      "usage": {
+        "input_tokens": 726963,
+        "output_tokens": 11520,
+        "reported_generation_seconds": 498.06996422447264,
+        "logical_charged_output_tokens": 11520,
+        "output_token_limit_count": 0
+      },
+      "structure": {}
+    }
+  },
+  "repeated_trace_rows": {
+    "exaone4_12b/calibration/evidence/0": {
+      "calls": 8,
+      "ok": 0,
+      "errors": {
+        "json_parse_error": 8
+      },
+      "error_details": {
+        "Expecting value: line N column N (char N)": 8
+      },
+      "response_shapes": {
+        "fenced/object{clues,refs,states}": 8
+      },
+      "usage": {
+        "input_tokens": 25098,
+        "output_tokens": 1207,
+        "reported_generation_seconds": 27.138854240998626,
+        "logical_charged_output_tokens": 1207,
+        "output_token_limit_count": 0
+      }
+    },
+    "exaone4_12b/calibration/evidence/1": {
+      "calls": 8,
+      "ok": 0,
+      "errors": {
+        "json_parse_error": 8
+      },
+      "error_details": {
+        "Expecting value: line N column N (char N)": 8
+      },
+      "response_shapes": {
+        "fenced/object{clues,refs,states}": 8
+      },
+      "usage": {
+        "input_tokens": 32409,
+        "output_tokens": 1305,
+        "reported_generation_seconds": 28.499559306539595,
+        "logical_charged_output_tokens": 1305,
+        "output_token_limit_count": 0
+      }
+    },
+    "exaone4_12b/calibration/initial/0": {
+      "calls": 8,
+      "ok": 8,
+      "errors": {
+        "none": 8
+      },
+      "error_details": {},
+      "response_shapes": {
+        "plain/array[9] of int": 8
+      },
+      "usage": {
+        "input_tokens": 14548,
+        "output_tokens": 224,
+        "reported_generation_seconds": 5.758277349174023,
+        "logical_charged_output_tokens": 224,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/calibration/action/0": {
+      "calls": 815,
+      "ok": 426,
+      "errors": {
+        "none": 426,
+        "schema_error": 389
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 368,
+        "read_window: at most 17 lines may be requested": 15,
+        "read_window: require integer 0 <= start <= end < line_count": 6
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 814,
+        "plain/object{name}": 1
+      },
+      "usage": {
+        "input_tokens": 1885844,
+        "output_tokens": 13894,
+        "reported_generation_seconds": 732.7810189966112,
+        "logical_charged_output_tokens": 13894,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/calibration/action/1": {
+      "calls": 389,
+      "ok": 30,
+      "errors": {
+        "none": 30,
+        "schema_error": 359
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 261,
+        "read_window: at most 17 lines may be requested": 88,
+        "read_window: require integer 0 <= start <= end < line_count": 10
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 389
+      },
+      "usage": {
+        "input_tokens": 950361,
+        "output_tokens": 6743,
+        "reported_generation_seconds": 359.53099665325135,
+        "logical_charged_output_tokens": 6743,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/calibration/evidence/0": {
+      "calls": 1536,
+      "ok": 912,
+      "errors": {
+        "json_parse_error": 6,
+        "none": 912,
+        "schema_error": 618
+      },
+      "error_details": {
+        "Expecting ',' delimiter: line N column N (char N)": 6,
+        "evidence.clues: expected 9 entries in label order": 360,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 189,
+        "evidence[label].clue: without refs, unknown requires null": 9,
+        "evidence[label].refs: absent requires supporting transcript lines": 6,
+        "evidence[label].refs: duplicate line indices": 42,
+        "evidence[label].refs: expected an array of integer line indices": 12
+      },
+      "response_shapes": {
+        "plain/object{clues,refs,states}": 1530,
+        "unparseable_json": 6
+      },
+      "usage": {
+        "input_tokens": 4677162,
+        "output_tokens": 369810,
+        "reported_generation_seconds": 13923.378061747178,
+        "logical_charged_output_tokens": 369810,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/calibration/evidence/1": {
+      "calls": 624,
+      "ok": 321,
+      "errors": {
+        "json_parse_error": 9,
+        "none": 321,
+        "schema_error": 294
+      },
+      "error_details": {
+        "Expecting ',' delimiter: line N column N (char N)": 9,
+        "evidence.clues: expected 9 entries in label order": 213,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 3,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 39,
+        "evidence[label].clue: without refs, unknown requires null": 6,
+        "evidence[label].refs: absent requires supporting transcript lines": 9,
+        "evidence[label].refs: duplicate line indices": 9,
+        "evidence[label].refs: expected an array of integer line indices": 9,
+        "evidence[label].refs: implicit requires supporting transcript lines": 6
+      },
+      "response_shapes": {
+        "plain/object{clues,refs,states}": 615,
+        "unparseable_json": 9
+      },
+      "usage": {
+        "input_tokens": 2547240,
+        "output_tokens": 162162,
+        "reported_generation_seconds": 6152.104798768647,
+        "logical_charged_output_tokens": 162162,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/calibration/final/0": {
+      "calls": 463,
+      "ok": 463,
+      "errors": {
+        "none": 463
+      },
+      "error_details": {},
+      "response_shapes": {
+        "plain/array[9] of int": 463
+      },
+      "usage": {
+        "input_tokens": 1050476,
+        "output_tokens": 13890,
+        "reported_generation_seconds": 636.5915001025423,
+        "logical_charged_output_tokens": 13890,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/calibration/initial/0": {
+      "calls": 1536,
+      "ok": 1536,
+      "errors": {
+        "none": 1536
+      },
+      "error_details": {},
+      "response_shapes": {
+        "plain/array[9] of int": 1536
+      },
+      "usage": {
+        "input_tokens": 2924157,
+        "output_tokens": 46080,
+        "reported_generation_seconds": 2026.7840434871614,
+        "logical_charged_output_tokens": 46080,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/dev/action/0": {
+      "calls": 629,
+      "ok": 322,
+      "errors": {
+        "none": 322,
+        "schema_error": 307
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 288,
+        "read_window: at most 17 lines may be requested": 16,
+        "read_window: require integer 0 <= start <= end < line_count": 3
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 629
+      },
+      "usage": {
+        "input_tokens": 1451245,
+        "output_tokens": 10726,
+        "reported_generation_seconds": 557.777131085284,
+        "logical_charged_output_tokens": 10726,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/dev/action/1": {
+      "calls": 307,
+      "ok": 17,
+      "errors": {
+        "none": 17,
+        "schema_error": 290
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 203,
+        "read_window: at most 17 lines may be requested": 80,
+        "read_window: require integer 0 <= start <= end < line_count": 7
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 307
+      },
+      "usage": {
+        "input_tokens": 746386,
+        "output_tokens": 5323,
+        "reported_generation_seconds": 279.6911905752495,
+        "logical_charged_output_tokens": 5323,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/dev/evidence/0": {
+      "calls": 1152,
+      "ok": 672,
+      "errors": {
+        "none": 672,
+        "schema_error": 480
+      },
+      "error_details": {
+        "evidence.clues: expected 9 entries in label order": 264,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 9,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 153,
+        "evidence[label].refs: absent requires supporting transcript lines": 6,
+        "evidence[label].refs: duplicate line indices": 42,
+        "evidence[label].refs: expected an array of integer line indices": 6
+      },
+      "response_shapes": {
+        "plain/object{clues,refs,states}": 1152
+      },
+      "usage": {
+        "input_tokens": 3485451,
+        "output_tokens": 281853,
+        "reported_generation_seconds": 10371.630814248696,
+        "logical_charged_output_tokens": 281853,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/dev/evidence/1": {
+      "calls": 480,
+      "ok": 279,
+      "errors": {
+        "none": 279,
+        "schema_error": 201
+      },
+      "error_details": {
+        "evidence.clues: expected 9 entries in label order": 126,
+        "evidence[label].clue.meaning: expected 1 to 160 characters": 6,
+        "evidence[label].clue: supporting refs require exactly meaning, kind": 45,
+        "evidence[label].clue: without refs, unknown requires null": 3,
+        "evidence[label].refs: absent requires supporting transcript lines": 6,
+        "evidence[label].refs: duplicate line indices": 9,
+        "evidence[label].refs: expected an array of integer line indices": 3,
+        "evidence[label].refs: implicit requires supporting transcript lines": 3
+      },
+      "response_shapes": {
+        "plain/object{clues,refs,states}": 480
+      },
+      "usage": {
+        "input_tokens": 1944549,
+        "output_tokens": 121230,
+        "reported_generation_seconds": 4522.8868989301845,
+        "logical_charged_output_tokens": 121230,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/dev/final/0": {
+      "calls": 344,
+      "ok": 344,
+      "errors": {
+        "none": 344
+      },
+      "error_details": {},
+      "response_shapes": {
+        "plain/array[9] of int": 344
+      },
+      "usage": {
+        "input_tokens": 776874,
+        "output_tokens": 10320,
+        "reported_generation_seconds": 463.96332780923694,
+        "logical_charged_output_tokens": 10320,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/dev/initial/0": {
+      "calls": 1152,
+      "ok": 1152,
+      "errors": {
+        "none": 1152
+      },
+      "error_details": {},
+      "response_shapes": {
+        "plain/array[9] of int": 1152
+      },
+      "usage": {
+        "input_tokens": 2180889,
+        "output_tokens": 34560,
+        "reported_generation_seconds": 1494.209892673418,
+        "logical_charged_output_tokens": 34560,
+        "output_token_limit_count": 0
+      }
+    }
+  },
+  "denominator_note": "Each unique cache key counts one saved model request; initial/evidence traces repeat across three Qwen policy records. Tool trace rows are excluded from model-call counts. Error details are first-validator failures, not exhaustive per-response defects.",
+  "replay": {
+    "split_hashes_verified": true,
+    "source": "saved runtime validators and clean_text",
+    "calls_compared": 5131,
+    "saved_validator_disagreements": 0
+  },
+  "diagnostic_parse_only_salvage": {
+    "exaone4_12b/calibration/evidence/0": {
+      "failed_unique_calls": 8,
+      "whole_response_fence_removal": {
+        "responses_changed": 8,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "evidence.refs: expected 9 entries in label order": 1,
+          "evidence.states: expected 9 entries in label order": 7
+        }
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "Expecting value: line N column N (char N)": 8
+        }
+      },
+      "both": {
+        "responses_changed": 8,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "evidence.refs: expected 9 entries in label order": 1,
+          "evidence.states: expected 9 entries in label order": 7
+        }
+      }
+    },
+    "exaone4_12b/calibration/evidence/1": {
+      "failed_unique_calls": 8,
+      "whole_response_fence_removal": {
+        "responses_changed": 8,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "evidence.refs: expected 9 entries in label order": 1,
+          "evidence.states: expected 9 entries in label order": 7
+        }
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "Expecting value: line N column N (char N)": 8
+        }
+      },
+      "both": {
+        "responses_changed": 8,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "evidence.refs: expected 9 entries in label order": 1,
+          "evidence.states: expected 9 entries in label order": 7
+        }
+      }
+    },
+    "exaone4_12b/calibration/initial/0": {
+      "failed_unique_calls": 0,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      }
+    },
+    "qwen35_4b/calibration/action/0": {
+      "failed_unique_calls": 389,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 368,
+          "read_window: at most 17 lines may be requested": 15,
+          "read_window: require integer 0 <= start <= end < line_count": 6
+        }
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 368,
+          "read_window: at most 17 lines may be requested": 15,
+          "read_window: require integer 0 <= start <= end < line_count": 6
+        }
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 368,
+          "read_window: at most 17 lines may be requested": 15,
+          "read_window: require integer 0 <= start <= end < line_count": 6
+        }
+      }
+    },
+    "qwen35_4b/calibration/action/1": {
+      "failed_unique_calls": 359,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 261,
+          "read_window: at most 17 lines may be requested": 88,
+          "read_window: require integer 0 <= start <= end < line_count": 10
+        }
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 261,
+          "read_window: at most 17 lines may be requested": 88,
+          "read_window: require integer 0 <= start <= end < line_count": 10
+        }
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 261,
+          "read_window: at most 17 lines may be requested": 88,
+          "read_window: require integer 0 <= start <= end < line_count": 10
+        }
+      }
+    },
+    "qwen35_4b/calibration/evidence/0": {
+      "failed_unique_calls": 208,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "Expecting ',' delimiter: line N column N (char N)": 2,
+          "evidence.clues: expected 9 entries in label order": 120,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 63,
+          "evidence[label].clue: without refs, unknown requires null": 3,
+          "evidence[label].refs: absent requires supporting transcript lines": 2,
+          "evidence[label].refs: duplicate line indices": 14,
+          "evidence[label].refs: expected an array of integer line indices": 4
+        }
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "Expecting ',' delimiter: line N column N (char N)": 2,
+          "evidence.clues: expected 9 entries in label order": 120,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 63,
+          "evidence[label].clue: without refs, unknown requires null": 3,
+          "evidence[label].refs: absent requires supporting transcript lines": 2,
+          "evidence[label].refs: duplicate line indices": 14,
+          "evidence[label].refs: expected an array of integer line indices": 4
+        }
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "Expecting ',' delimiter: line N column N (char N)": 2,
+          "evidence.clues: expected 9 entries in label order": 120,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 63,
+          "evidence[label].clue: without refs, unknown requires null": 3,
+          "evidence[label].refs: absent requires supporting transcript lines": 2,
+          "evidence[label].refs: duplicate line indices": 14,
+          "evidence[label].refs: expected an array of integer line indices": 4
+        }
+      }
+    },
+    "qwen35_4b/calibration/evidence/1": {
+      "failed_unique_calls": 101,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "Expecting ',' delimiter: line N column N (char N)": 3,
+          "evidence.clues: expected 9 entries in label order": 71,
+          "evidence[label].clue.meaning: expected 1 to 160 characters": 1,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 13,
+          "evidence[label].clue: without refs, unknown requires null": 2,
+          "evidence[label].refs: absent requires supporting transcript lines": 3,
+          "evidence[label].refs: duplicate line indices": 3,
+          "evidence[label].refs: expected an array of integer line indices": 3,
+          "evidence[label].refs: implicit requires supporting transcript lines": 2
+        }
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "Expecting ',' delimiter: line N column N (char N)": 3,
+          "evidence.clues: expected 9 entries in label order": 71,
+          "evidence[label].clue.meaning: expected 1 to 160 characters": 1,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 13,
+          "evidence[label].clue: without refs, unknown requires null": 2,
+          "evidence[label].refs: absent requires supporting transcript lines": 3,
+          "evidence[label].refs: duplicate line indices": 3,
+          "evidence[label].refs: expected an array of integer line indices": 3,
+          "evidence[label].refs: implicit requires supporting transcript lines": 2
+        }
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "Expecting ',' delimiter: line N column N (char N)": 3,
+          "evidence.clues: expected 9 entries in label order": 71,
+          "evidence[label].clue.meaning: expected 1 to 160 characters": 1,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 13,
+          "evidence[label].clue: without refs, unknown requires null": 2,
+          "evidence[label].refs: absent requires supporting transcript lines": 3,
+          "evidence[label].refs: duplicate line indices": 3,
+          "evidence[label].refs: expected an array of integer line indices": 3,
+          "evidence[label].refs: implicit requires supporting transcript lines": 2
+        }
+      }
+    },
+    "qwen35_4b/calibration/final/0": {
+      "failed_unique_calls": 0,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      }
+    },
+    "qwen35_4b/calibration/initial/0": {
+      "failed_unique_calls": 0,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      }
+    },
+    "qwen35_4b/dev/action/0": {
+      "failed_unique_calls": 307,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 288,
+          "read_window: at most 17 lines may be requested": 16,
+          "read_window: require integer 0 <= start <= end < line_count": 3
+        }
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 288,
+          "read_window: at most 17 lines may be requested": 16,
+          "read_window: require integer 0 <= start <= end < line_count": 3
+        }
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 288,
+          "read_window: at most 17 lines may be requested": 16,
+          "read_window: require integer 0 <= start <= end < line_count": 3
+        }
+      }
+    },
+    "qwen35_4b/dev/action/1": {
+      "failed_unique_calls": 290,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 203,
+          "read_window: at most 17 lines may be requested": 80,
+          "read_window: require integer 0 <= start <= end < line_count": 7
+        }
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 203,
+          "read_window: at most 17 lines may be requested": 80,
+          "read_window: require integer 0 <= start <= end < line_count": 7
+        }
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "action: this exact tool action has already executed; choose a new action or finish": 203,
+          "read_window: at most 17 lines may be requested": 80,
+          "read_window: require integer 0 <= start <= end < line_count": 7
+        }
+      }
+    },
+    "qwen35_4b/dev/evidence/0": {
+      "failed_unique_calls": 160,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "evidence.clues: expected 9 entries in label order": 88,
+          "evidence[label].clue.meaning: expected 1 to 160 characters": 3,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 51,
+          "evidence[label].refs: absent requires supporting transcript lines": 2,
+          "evidence[label].refs: duplicate line indices": 14,
+          "evidence[label].refs: expected an array of integer line indices": 2
+        }
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "evidence.clues: expected 9 entries in label order": 88,
+          "evidence[label].clue.meaning: expected 1 to 160 characters": 3,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 51,
+          "evidence[label].refs: absent requires supporting transcript lines": 2,
+          "evidence[label].refs: duplicate line indices": 14,
+          "evidence[label].refs: expected an array of integer line indices": 2
+        }
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "evidence.clues: expected 9 entries in label order": 88,
+          "evidence[label].clue.meaning: expected 1 to 160 characters": 3,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 51,
+          "evidence[label].refs: absent requires supporting transcript lines": 2,
+          "evidence[label].refs: duplicate line indices": 14,
+          "evidence[label].refs: expected an array of integer line indices": 2
+        }
+      }
+    },
+    "qwen35_4b/dev/evidence/1": {
+      "failed_unique_calls": 67,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "evidence.clues: expected 9 entries in label order": 42,
+          "evidence[label].clue.meaning: expected 1 to 160 characters": 2,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 15,
+          "evidence[label].clue: without refs, unknown requires null": 1,
+          "evidence[label].refs: absent requires supporting transcript lines": 2,
+          "evidence[label].refs: duplicate line indices": 3,
+          "evidence[label].refs: expected an array of integer line indices": 1,
+          "evidence[label].refs: implicit requires supporting transcript lines": 1
+        }
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "evidence.clues: expected 9 entries in label order": 42,
+          "evidence[label].clue.meaning: expected 1 to 160 characters": 2,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 15,
+          "evidence[label].clue: without refs, unknown requires null": 1,
+          "evidence[label].refs: absent requires supporting transcript lines": 2,
+          "evidence[label].refs: duplicate line indices": 3,
+          "evidence[label].refs: expected an array of integer line indices": 1,
+          "evidence[label].refs: implicit requires supporting transcript lines": 1
+        }
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {
+          "evidence.clues: expected 9 entries in label order": 42,
+          "evidence[label].clue.meaning: expected 1 to 160 characters": 2,
+          "evidence[label].clue: supporting refs require exactly meaning, kind": 15,
+          "evidence[label].clue: without refs, unknown requires null": 1,
+          "evidence[label].refs: absent requires supporting transcript lines": 2,
+          "evidence[label].refs: duplicate line indices": 3,
+          "evidence[label].refs: expected an array of integer line indices": 1,
+          "evidence[label].refs: implicit requires supporting transcript lines": 1
+        }
+      }
+    },
+    "qwen35_4b/dev/final/0": {
+      "failed_unique_calls": 0,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      }
+    },
+    "qwen35_4b/dev/initial/0": {
+      "failed_unique_calls": 0,
+      "whole_response_fence_removal": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      },
+      "unambiguous_action_key_alias": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      },
+      "both": {
+        "responses_changed": 0,
+        "strict_schema_pass_after_transform": 0,
+        "remaining_validator_errors": {}
+      }
+    }
+  },
+  "repair_pairs": {
+    "exaone4_12b/calibration/evidence": {
+      "unique_pairs": 8,
+      "recovered_valid": 0,
+      "still_invalid": 8,
+      "raw_unchanged": 0,
+      "error_transitions": {
+        "Expecting value: line N column N (char N) -> Expecting value: line N column N (char N)": 8
+      },
+      "became_json_unparseable": 0,
+      "note": "Only invalid originals are repaired. Recovered validity does not establish semantic improvement; changed first-error category alone does not prove deterioration."
+    },
+    "qwen35_4b/calibration/action": {
+      "unique_pairs": 389,
+      "recovered_valid": 30,
+      "still_invalid": 359,
+      "raw_unchanged": 272,
+      "error_transitions": {
+        "action: this exact tool action has already executed; choose a new action or finish -> action: this exact tool action has already executed; choose a new action or finish": 258,
+        "action: this exact tool action has already executed; choose a new action or finish -> read_window: at most 17 lines may be requested": 73,
+        "action: this exact tool action has already executed; choose a new action or finish -> read_window: require integer 0 <= start <= end < line_count": 7,
+        "action: this exact tool action has already executed; choose a new action or finish -> valid": 30,
+        "read_window: at most 17 lines may be requested -> read_window: at most 17 lines may be requested": 15,
+        "read_window: require integer 0 <= start <= end < line_count -> action: this exact tool action has already executed; choose a new action or finish": 3,
+        "read_window: require integer 0 <= start <= end < line_count -> read_window: require integer 0 <= start <= end < line_count": 3
+      },
+      "became_json_unparseable": 0,
+      "note": "Only invalid originals are repaired. Recovered validity does not establish semantic improvement; changed first-error category alone does not prove deterioration."
+    },
+    "qwen35_4b/calibration/evidence": {
+      "unique_pairs": 208,
+      "recovered_valid": 107,
+      "still_invalid": 101,
+      "raw_unchanged": 6,
+      "error_transitions": {
+        "Expecting ',' delimiter: line N column N (char N) -> Expecting ',' delimiter: line N column N (char N)": 1,
+        "Expecting ',' delimiter: line N column N (char N) -> valid": 1,
+        "evidence.clues: expected 9 entries in label order -> Expecting ',' delimiter: line N column N (char N)": 1,
+        "evidence.clues: expected 9 entries in label order -> evidence.clues: expected 9 entries in label order": 63,
+        "evidence.clues: expected 9 entries in label order -> evidence[label].clue: supporting refs require exactly meaning, kind": 1,
+        "evidence.clues: expected 9 entries in label order -> evidence[label].clue: without refs, unknown requires null": 1,
+        "evidence.clues: expected 9 entries in label order -> evidence[label].refs: expected an array of integer line indices": 2,
+        "evidence.clues: expected 9 entries in label order -> evidence[label].refs: implicit requires supporting transcript lines": 2,
+        "evidence.clues: expected 9 entries in label order -> valid": 50,
+        "evidence[label].clue: supporting refs require exactly meaning, kind -> Expecting ',' delimiter: line N column N (char N)": 1,
+        "evidence[label].clue: supporting refs require exactly meaning, kind -> evidence.clues: expected 9 entries in label order": 5,
+        "evidence[label].clue: supporting refs require exactly meaning, kind -> evidence[label].clue: supporting refs require exactly meaning, kind": 12,
+        "evidence[label].clue: supporting refs require exactly meaning, kind -> evidence[label].refs: expected an array of integer line indices": 1,
+        "evidence[label].clue: supporting refs require exactly meaning, kind -> valid": 44,
+        "evidence[label].clue: without refs, unknown requires null -> evidence[label].clue: without refs, unknown requires null": 1,
+        "evidence[label].clue: without refs, unknown requires null -> evidence[label].refs: absent requires supporting transcript lines": 1,
+        "evidence[label].clue: without refs, unknown requires null -> valid": 1,
+        "evidence[label].refs: absent requires supporting transcript lines -> evidence[label].refs: absent requires supporting transcript lines": 2,
+        "evidence[label].refs: duplicate line indices -> evidence.clues: expected 9 entries in label order": 3,
+        "evidence[label].refs: duplicate line indices -> evidence[label].clue.meaning: expected 1 to 160 characters": 1,
+        "evidence[label].refs: duplicate line indices -> evidence[label].refs: duplicate line indices": 3,
+        "evidence[label].refs: duplicate line indices -> valid": 7,
+        "evidence[label].refs: expected an array of integer line indices -> valid": 4
+      },
+      "became_json_unparseable": 2,
+      "note": "Only invalid originals are repaired. Recovered validity does not establish semantic improvement; changed first-error category alone does not prove deterioration."
+    },
+    "qwen35_4b/dev/action": {
+      "unique_pairs": 307,
+      "recovered_valid": 17,
+      "still_invalid": 290,
+      "raw_unchanged": 218,
+      "error_transitions": {
+        "action: this exact tool action has already executed; choose a new action or finish -> action: this exact tool action has already executed; choose a new action or finish": 202,
+        "action: this exact tool action has already executed; choose a new action or finish -> read_window: at most 17 lines may be requested": 64,
+        "action: this exact tool action has already executed; choose a new action or finish -> read_window: require integer 0 <= start <= end < line_count": 5,
+        "action: this exact tool action has already executed; choose a new action or finish -> valid": 17,
+        "read_window: at most 17 lines may be requested -> read_window: at most 17 lines may be requested": 16,
+        "read_window: require integer 0 <= start <= end < line_count -> action: this exact tool action has already executed; choose a new action or finish": 1,
+        "read_window: require integer 0 <= start <= end < line_count -> read_window: require integer 0 <= start <= end < line_count": 2
+      },
+      "became_json_unparseable": 0,
+      "note": "Only invalid originals are repaired. Recovered validity does not establish semantic improvement; changed first-error category alone does not prove deterioration."
+    },
+    "qwen35_4b/dev/evidence": {
+      "unique_pairs": 160,
+      "recovered_valid": 93,
+      "still_invalid": 67,
+      "raw_unchanged": 6,
+      "error_transitions": {
+        "evidence.clues: expected 9 entries in label order -> evidence.clues: expected 9 entries in label order": 36,
+        "evidence.clues: expected 9 entries in label order -> evidence[label].clue: supporting refs require exactly meaning, kind": 2,
+        "evidence.clues: expected 9 entries in label order -> evidence[label].refs: absent requires supporting transcript lines": 1,
+        "evidence.clues: expected 9 entries in label order -> evidence[label].refs: duplicate line indices": 2,
+        "evidence.clues: expected 9 entries in label order -> evidence[label].refs: implicit requires supporting transcript lines": 1,
+        "evidence.clues: expected 9 entries in label order -> valid": 46,
+        "evidence[label].clue.meaning: expected 1 to 160 characters -> evidence[label].clue.meaning: expected 1 to 160 characters": 2,
+        "evidence[label].clue.meaning: expected 1 to 160 characters -> valid": 1,
+        "evidence[label].clue: supporting refs require exactly meaning, kind -> evidence.clues: expected 9 entries in label order": 2,
+        "evidence[label].clue: supporting refs require exactly meaning, kind -> evidence[label].clue: supporting refs require exactly meaning, kind": 13,
+        "evidence[label].clue: supporting refs require exactly meaning, kind -> valid": 36,
+        "evidence[label].refs: absent requires supporting transcript lines -> evidence[label].refs: absent requires supporting transcript lines": 1,
+        "evidence[label].refs: absent requires supporting transcript lines -> valid": 1,
+        "evidence[label].refs: duplicate line indices -> evidence.clues: expected 9 entries in label order": 4,
+        "evidence[label].refs: duplicate line indices -> evidence[label].clue: without refs, unknown requires null": 1,
+        "evidence[label].refs: duplicate line indices -> evidence[label].refs: duplicate line indices": 1,
+        "evidence[label].refs: duplicate line indices -> valid": 8,
+        "evidence[label].refs: expected an array of integer line indices -> evidence[label].refs: expected an array of integer line indices": 1,
+        "evidence[label].refs: expected an array of integer line indices -> valid": 1
+      },
+      "became_json_unparseable": 0,
+      "note": "Only invalid originals are repaired. Recovered validity does not establish semantic improvement; changed first-error category alone does not prove deterioration."
+    }
+  },
+  "action_rounds": {
+    "qwen35_4b/calibration/1/0": {
+      "calls": 411,
+      "ok": 404,
+      "errors": {
+        "none": 404,
+        "schema_error": 7
+      },
+      "error_details": {
+        "read_window: at most 17 lines may be requested": 6,
+        "read_window: require integer 0 <= start <= end < line_count": 1
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 411
+      },
+      "usage": {
+        "input_tokens": 937352,
+        "output_tokens": 7007,
+        "reported_generation_seconds": 367.80821454152465,
+        "logical_charged_output_tokens": 7007,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/calibration/1/1": {
+      "calls": 7,
+      "ok": 0,
+      "errors": {
+        "schema_error": 7
+      },
+      "error_details": {
+        "read_window: at most 17 lines may be requested": 6,
+        "read_window: require integer 0 <= start <= end < line_count": 1
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 7
+      },
+      "usage": {
+        "input_tokens": 15881,
+        "output_tokens": 126,
+        "reported_generation_seconds": 6.457540708594024,
+        "logical_charged_output_tokens": 126,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/calibration/2/0": {
+      "calls": 404,
+      "ok": 22,
+      "errors": {
+        "none": 22,
+        "schema_error": 382
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 368,
+        "read_window: at most 17 lines may be requested": 9,
+        "read_window: require integer 0 <= start <= end < line_count": 5
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 403,
+        "plain/object{name}": 1
+      },
+      "usage": {
+        "input_tokens": 948492,
+        "output_tokens": 6887,
+        "reported_generation_seconds": 364.9728044550866,
+        "logical_charged_output_tokens": 6887,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/calibration/2/1": {
+      "calls": 382,
+      "ok": 30,
+      "errors": {
+        "none": 30,
+        "schema_error": 352
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 261,
+        "read_window: at most 17 lines may be requested": 82,
+        "read_window: require integer 0 <= start <= end < line_count": 9
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 382
+      },
+      "usage": {
+        "input_tokens": 934480,
+        "output_tokens": 6617,
+        "reported_generation_seconds": 353.0734559446573,
+        "logical_charged_output_tokens": 6617,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/dev/1/0": {
+      "calls": 317,
+      "ok": 312,
+      "errors": {
+        "none": 312,
+        "schema_error": 5
+      },
+      "error_details": {
+        "read_window: at most 17 lines may be requested": 4,
+        "read_window: require integer 0 <= start <= end < line_count": 1
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 317
+      },
+      "usage": {
+        "input_tokens": 721132,
+        "output_tokens": 5402,
+        "reported_generation_seconds": 279.78031485527754,
+        "logical_charged_output_tokens": 5402,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/dev/1/1": {
+      "calls": 5,
+      "ok": 0,
+      "errors": {
+        "schema_error": 5
+      },
+      "error_details": {
+        "read_window: at most 17 lines may be requested": 4,
+        "read_window: require integer 0 <= start <= end < line_count": 1
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 5
+      },
+      "usage": {
+        "input_tokens": 10833,
+        "output_tokens": 90,
+        "reported_generation_seconds": 4.502135182730854,
+        "logical_charged_output_tokens": 90,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/dev/2/0": {
+      "calls": 312,
+      "ok": 10,
+      "errors": {
+        "none": 10,
+        "schema_error": 302
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 288,
+        "read_window: at most 17 lines may be requested": 12,
+        "read_window: require integer 0 <= start <= end < line_count": 2
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 312
+      },
+      "usage": {
+        "input_tokens": 730113,
+        "output_tokens": 5324,
+        "reported_generation_seconds": 277.9968162300065,
+        "logical_charged_output_tokens": 5324,
+        "output_token_limit_count": 0
+      }
+    },
+    "qwen35_4b/dev/2/1": {
+      "calls": 302,
+      "ok": 17,
+      "errors": {
+        "none": 17,
+        "schema_error": 285
+      },
+      "error_details": {
+        "action: this exact tool action has already executed; choose a new action or finish": 203,
+        "read_window: at most 17 lines may be requested": 76,
+        "read_window: require integer 0 <= start <= end < line_count": 6
+      },
+      "response_shapes": {
+        "plain/object{end,name,start}": 302
+      },
+      "usage": {
+        "input_tokens": 735553,
+        "output_tokens": 5233,
+        "reported_generation_seconds": 275.18905539251864,
+        "logical_charged_output_tokens": 5233,
+        "output_token_limit_count": 0
+      }
+    }
+  },
+  "usage_totals": {
+    "unique_cache_calls": {
+      "input_tokens": 12853057,
+      "output_tokens": 402197,
+      "reported_generation_seconds": 15922.063359403983,
+      "logical_charged_output_tokens": 402197,
+      "output_token_limit_count": 0
+    },
+    "all_trace_rows_logical": {
+      "input_tokens": 24692689,
+      "output_tokens": 1079327,
+      "reported_generation_seconds": 41582.72636597417,
+      "logical_charged_output_tokens": 1079327,
+      "output_token_limit_count": 0
+    },
+    "note": "Unique-key totals sum stored usage once per generated response. Repeated trace totals are logical policy replay cost and must not be presented as new GPU generation time or token cost. Stored generation seconds are not total job wall time.",
+    "trace_backend_called_flags": 5131,
+    "trace_cache_hit_flags": 4320
+  }
+}
