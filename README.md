@@ -57,6 +57,17 @@ uv run python -m src.preprocess.pack_for_colab --what audio   # m1/m2 오디오 
 
 번들은 **Drive 로만** 옮긴다. 전사 텍스트에 개인정보가 있어 공개 저장소에 올리면 안 된다.
 
+## 현재 선택된 Mission 3 모델
+
+전사 텍스트만 사용하는 **RoBERTa 50:50 앙상블**의 추론 코드·tokenizer·고정 임계값·학습 가중치를 [독립 배포 폴더](submission/mission3_roberta_ensemble/README.md)에 추가했습니다. 저장된 공식 Validation 3,640통 Macro-F1은 **64.7122%**이며, 후속 후보는 Calibration 교체 조건을 통과하지 못해 기준 모델을 유지했습니다. `model.pt`는 Git LFS로 내려받습니다.
+
+```bash
+git lfs install
+git lfs pull --include="submission/mission3_roberta_ensemble/model.pt"
+```
+
+원/공개 신경망 tensor와 tokenizer의 동일성, 합성 검사 및 배포 파일 SHA256을 확인했습니다. 새 공개 CLI의 전체 Validation 재실행 결과는 아니며, 공식 CSV 직렬화와 장문 tokenizer 커버리지 검증은 남아 있습니다. 실행 방법과 검증 범위는 배포 폴더 README에 있습니다.
+
 ## 구조
 
 ```

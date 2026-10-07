@@ -1,0 +1,19 @@
+{
+  "model": "text-only RoBERTa 50:50 ensemble",
+  "labels": ["고열", "구토", "두통", "복통", "어지러움", "열상", "오심", "전신쇠약", "호흡곤란"],
+  "weights": [0.5, 0.5],
+  "thresholds": [0.27499999999999997, 0.3749999999999999, 0.3749999999999999, 0.5499999999999999, 0.42499999999999993, 0.6249999999999999, 0.15, 0.3749999999999999, 0.47499999999999987],
+  "max_length": 512,
+  "stride": 128,
+  "pooling": "max_logits",
+  "batch_chunks": 16,
+  "calibration_fit_n": 2920,
+  "model_input_fields": ["text"],
+  "precision": "FP32 model weights / BF16 CUDA autocast",
+  "attention": "sdpa",
+  "runtime_versions": {"python": "3.10.21", "torch": "2.6.0", "transformers": "5.17.0"},
+  "reference_evaluation": {"dataset": "official Validation", "n": 3640, "macro_f1_percent": 64.7122, "status": "previously saved selected baseline; no new full Validation replay"},
+  "source_checkpoint_sha256": "b2f36866cd3bbefcdb41f18213bd09b3ff51d84c08599d5186210c4051becfe3",
+  "source_baseline_receipt_sha256": "9f40d38584ba2fba21e4938e0b07092d9b20e63ac94c519e3b839f1b6668db39",
+  "official_csv_confirmed": false
+}

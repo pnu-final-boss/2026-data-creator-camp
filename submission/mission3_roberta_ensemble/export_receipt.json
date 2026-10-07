@@ -1,0 +1,3180 @@
+{
+  "status": "passed",
+  "source_checkpoint_sha256": "b2f36866cd3bbefcdb41f18213bd09b3ff51d84c08599d5186210c4051becfe3",
+  "exported_checkpoint_sha256": "263c8aa0495cb67366361b9672af6c0c1a5a963f54d74322888aa8a860120763",
+  "exported_checkpoint_bytes": 885109986,
+  "member_count": 2,
+  "exported_member_fields": [
+    "kind",
+    "labels",
+    "config",
+    "state_dict",
+    "max_length",
+    "stride",
+    "pooling"
+  ],
+  "source_member_field_names": [
+    [
+      "config",
+      "epoch",
+      "kind",
+      "labels",
+      "max_length",
+      "pooling",
+      "state_dict",
+      "stride",
+      "thresholds"
+    ],
+    [
+      "config",
+      "epoch",
+      "kind",
+      "labels",
+      "max_length",
+      "pooling",
+      "state_dict",
+      "stride",
+      "thresholds"
+    ]
+  ],
+  "member_config_fields": [
+    [
+      "add_cross_attention",
+      "architectures",
+      "attention_probs_dropout_prob",
+      "bad_words_ids",
+      "begin_suppress_tokens",
+      "bos_token_id",
+      "chunk_size_feed_forward",
+      "classifier_dropout",
+      "cross_attention_hidden_size",
+      "decoder_start_token_id",
+      "diversity_penalty",
+      "do_sample",
+      "dtype",
+      "early_stopping",
+      "encoder_no_repeat_ngram_size",
+      "eos_token_id",
+      "exponential_decay_length_penalty",
+      "finetuning_task",
+      "forced_bos_token_id",
+      "forced_eos_token_id",
+      "gradient_checkpointing",
+      "hidden_act",
+      "hidden_dropout_prob",
+      "hidden_size",
+      "id2label",
+      "initializer_range",
+      "intermediate_size",
+      "is_decoder",
+      "is_encoder_decoder",
+      "label2id",
+      "layer_norm_eps",
+      "length_penalty",
+      "max_length",
+      "max_position_embeddings",
+      "min_length",
+      "model_type",
+      "no_repeat_ngram_size",
+      "num_attention_heads",
+      "num_beam_groups",
+      "num_beams",
+      "num_hidden_layers",
+      "num_return_sequences",
+      "output_attentions",
+      "output_hidden_states",
+      "output_scores",
+      "pad_token_id",
+      "position_embedding_type",
+      "prefix",
+      "problem_type",
+      "pruned_heads",
+      "remove_invalid_values",
+      "repetition_penalty",
+      "return_dict",
+      "return_dict_in_generate",
+      "sep_token_id",
+      "suppress_tokens",
+      "task_specific_params",
+      "temperature",
+      "tf_legacy_loss",
+      "tie_encoder_decoder",
+      "tie_word_embeddings",
+      "tokenizer_class",
+      "top_k",
+      "top_p",
+      "torchscript",
+      "transformers_version",
+      "type_vocab_size",
+      "typical_p",
+      "use_bfloat16",
+      "use_cache",
+      "vocab_size"
+    ],
+    [
+      "add_cross_attention",
+      "architectures",
+      "attention_probs_dropout_prob",
+      "bad_words_ids",
+      "begin_suppress_tokens",
+      "bos_token_id",
+      "chunk_size_feed_forward",
+      "classifier_dropout",
+      "cross_attention_hidden_size",
+      "decoder_start_token_id",
+      "diversity_penalty",
+      "do_sample",
+      "dtype",
+      "early_stopping",
+      "encoder_no_repeat_ngram_size",
+      "eos_token_id",
+      "exponential_decay_length_penalty",
+      "finetuning_task",
+      "forced_bos_token_id",
+      "forced_eos_token_id",
+      "gradient_checkpointing",
+      "hidden_act",
+      "hidden_dropout_prob",
+      "hidden_size",
+      "id2label",
+      "initializer_range",
+      "intermediate_size",
+      "is_decoder",
+      "is_encoder_decoder",
+      "label2id",
+      "layer_norm_eps",
+      "length_penalty",
+      "max_length",
+      "max_position_embeddings",
+      "min_length",
+      "model_type",
+      "no_repeat_ngram_size",
+      "num_attention_heads",
+      "num_beam_groups",
+      "num_beams",
+      "num_hidden_layers",
+      "num_return_sequences",
+      "output_attentions",
+      "output_hidden_states",
+      "output_scores",
+      "pad_token_id",
+      "position_embedding_type",
+      "prefix",
+      "problem_type",
+      "pruned_heads",
+      "remove_invalid_values",
+      "repetition_penalty",
+      "return_dict",
+      "return_dict_in_generate",
+      "sep_token_id",
+      "suppress_tokens",
+      "task_specific_params",
+      "temperature",
+      "tf_legacy_loss",
+      "tie_encoder_decoder",
+      "tie_word_embeddings",
+      "tokenizer_class",
+      "top_k",
+      "top_p",
+      "torchscript",
+      "transformers_version",
+      "type_vocab_size",
+      "typical_p",
+      "use_bfloat16",
+      "use_cache",
+      "vocab_size"
+    ]
+  ],
+  "member_state_dicts": [
+    {
+      "roberta.embeddings.word_embeddings.weight": {
+        "shape": [
+          32000,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "481de780749050d08fcdb8cbccae2f71d3b162ef2348c8c15b40177827d607ec"
+      },
+      "roberta.embeddings.position_embeddings.weight": {
+        "shape": [
+          514,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e1c344564e03eec1351548208c6405494c8fda32cfffcea8bee61b3c94b24df6"
+      },
+      "roberta.embeddings.token_type_embeddings.weight": {
+        "shape": [
+          1,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3c035947c0555e5f1076a3c830ae4a9bb3fc1bfef29c1194a0b47f8723cadad1"
+      },
+      "roberta.embeddings.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "68f58c711ceda6d51120bbb61a849956e03727aca682f6e46092c615e5e33e90"
+      },
+      "roberta.embeddings.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e1bf64b0d84b34f0028ffbc4c23e93e39d42ebf7c6b0386ecdc6af891528b2a2"
+      },
+      "roberta.encoder.layer.0.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7a4ef24b72f2424a0917f094e9eea52e784e28c03ab69827f015ef3f4ce0aad6"
+      },
+      "roberta.encoder.layer.0.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5b24151829b33a7947b44c52c0ff83bb41c0919b9218057d5e09ba56e4dd06bb"
+      },
+      "roberta.encoder.layer.0.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "208239cc5980732dfc4b963b3aaebbbd8bb9736bd60b26643fd70b4060ab9dbf"
+      },
+      "roberta.encoder.layer.0.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fa8bb016286f1cd1031c4c49777df19d2a351d9202b6db0b11d1e6ba572f6691"
+      },
+      "roberta.encoder.layer.0.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a361794f0250ddaccb85133699458f8f0e8388ef23fb05ff37d0cf022d884cb3"
+      },
+      "roberta.encoder.layer.0.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "37ce87dc9591caa2f05cffe769c5c807bca475d04b358a7bcbbafee4df32a0f5"
+      },
+      "roberta.encoder.layer.0.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fac137813f55fea4d3f26043fba050ea72d44d44a8fa1086cf433296d9ca673c"
+      },
+      "roberta.encoder.layer.0.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f2b2944b3a911ce77b3f3912d933e3fb9e3a513662b0e442a25a6ad3417d3304"
+      },
+      "roberta.encoder.layer.0.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d959ddc37de45fc1aa33c7bd5fe89b8ce936acf3c5ca49c191867d6b94054bae"
+      },
+      "roberta.encoder.layer.0.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9802becad62faee23ca346c9ba1a629a0b79ab99d4205a5bd3857ae4098e3d20"
+      },
+      "roberta.encoder.layer.0.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4973748aaffa8873c93dd4ca99e4cf9be5f8b772e658f7fbe3a687dd13ea6235"
+      },
+      "roberta.encoder.layer.0.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5c21d4968dd282730a983db35b3a26be0a93188792a1cfc0cb856e2d5f1682c1"
+      },
+      "roberta.encoder.layer.0.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9849155e5585936043f89a7a286b34f27aed04b4611f8a7d5b89ea7890f23d0a"
+      },
+      "roberta.encoder.layer.0.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "87b91e82aab4bddb9c5de5f6a9390418eed2e79a0041264b8b749b1c112f3c16"
+      },
+      "roberta.encoder.layer.0.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "16e6671d4eb7cb4dfd082ff8efaa7f6e40db19fce174593d4c5bbe918128fc4e"
+      },
+      "roberta.encoder.layer.0.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3a6e2eb5e00c7460231f1f5a5a7229049f21af59612c775c3ad9ec591877a139"
+      },
+      "roberta.encoder.layer.1.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e6548199fc32828103508826e2d7c61fa55a361c06aa8cc958aab4d58b63ddd6"
+      },
+      "roberta.encoder.layer.1.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "06f7f94da0408e74c307fa43cebbea41352c9a1e3c3d62ee8a77919b5f6a44f5"
+      },
+      "roberta.encoder.layer.1.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "cf164067c7167584e13a3ebe1144f3cb8e5bbe085d16cad44d69947c0f46e7dd"
+      },
+      "roberta.encoder.layer.1.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c55abfb81d3a70928fda42721e998f3c2fb72197bb3d8a7132a709cf468f567a"
+      },
+      "roberta.encoder.layer.1.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d2be58fdb8d0c5f1706aeec512e9deee5efa24455468c328a1c1330c132bb3f4"
+      },
+      "roberta.encoder.layer.1.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a58fdd6d81e331000b6f678df37c76fe36ce6a07f1c63617379979564ea8f2b6"
+      },
+      "roberta.encoder.layer.1.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "055f5cd2338055e994ef788d4715afe26d3165acdc861edc63042edfef98ffbb"
+      },
+      "roberta.encoder.layer.1.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a71853aa6362e5d71c7c4c501439893da6a466877526dd9841b3049e50793dd6"
+      },
+      "roberta.encoder.layer.1.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "48da9ac23e837ba34726a74e99528c68657ca37890aeb50326997e0dd88b4ce5"
+      },
+      "roberta.encoder.layer.1.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8817629303c9825fef2fd57d31eae0667b677c0112ec383b7d3c4f215b80ecb4"
+      },
+      "roberta.encoder.layer.1.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fa06c7a181dd76b8b1c9ddfca68f1e7354462e54fbb2d849f95f438ae1648f7b"
+      },
+      "roberta.encoder.layer.1.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e203ed6ac592e148087db7a356a90acd24c96c852656d4fb6cb88389a3fc5e06"
+      },
+      "roberta.encoder.layer.1.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d1f5da1543dd0adf399de811a09e6bcffb9d354dec933078dfcfde25ca10820e"
+      },
+      "roberta.encoder.layer.1.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9c3c55520a564ee709ccc4e765980d50e79c0763919f4fcf466ba44910a86b5e"
+      },
+      "roberta.encoder.layer.1.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c6b6383009a3b003f401967a7fb20fdff2fa51a37af395efdf5ff89af88d8d7b"
+      },
+      "roberta.encoder.layer.1.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5297975d1d51ab1415898fdbe6d4a8a2d208c11ca1ceaf1c990b33f9e71a2ca9"
+      },
+      "roberta.encoder.layer.2.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "93e185f8a823f9691f9b31d9f1563b33c21f1a0b4e70651f84ea113c4ca9d188"
+      },
+      "roberta.encoder.layer.2.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "26683fe67ab36ba1480d914e4b88cf615754da182637302105c5db8d61d0a9db"
+      },
+      "roberta.encoder.layer.2.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e24d6c1f1a42261ad34a839c72708a32034246bd5f1df2e9b54e0ff935c7b6bf"
+      },
+      "roberta.encoder.layer.2.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "343d89e52281f3831e162cc01de6edbb58a9f5d2cfcfc47a4a1c044ac08be087"
+      },
+      "roberta.encoder.layer.2.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6aa10d2201d155eaa4ee7c9d93e16ed50fec87f1d98633120ee489ecad02fb84"
+      },
+      "roberta.encoder.layer.2.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3eb4115364747b8799eac347fb50bae2318f448dab7da9aed80755ee860425c3"
+      },
+      "roberta.encoder.layer.2.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6fe4d6494304caff65d2ee0337a47094c34eb0362752d2b4592496f5b6db6e2f"
+      },
+      "roberta.encoder.layer.2.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ad38f35e1627624a6a8bbc8c4ebd8dc66a393626989f7bb98e625fe741c50593"
+      },
+      "roberta.encoder.layer.2.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8a64b7853b1afc304bf7dcfb661381d3cc21aa7570f9a2e154d7edc69acdc803"
+      },
+      "roberta.encoder.layer.2.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "394aa92a93327dcef8a71691e562d47e5dff379f43c993ec50b8625326160355"
+      },
+      "roberta.encoder.layer.2.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e911f6e493edf3d8bcc07a1399dff1600e50f9ef5e66cdb4de93324ae0bd1b6e"
+      },
+      "roberta.encoder.layer.2.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ccfd8b04b18fe73d67c8f2a61729d47521d295a0ac6164f637c74fd8ee0ff33c"
+      },
+      "roberta.encoder.layer.2.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6f3af1b04d1e6c45bea38660e6814e07a1e779098150df37b42be5d57149f0a2"
+      },
+      "roberta.encoder.layer.2.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "be0be735145fcd7f3d75b7cd941aff33a804258d49f3498cf4b5a9e87b1a1f3c"
+      },
+      "roberta.encoder.layer.2.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2b533aa7b2bcc6e8976c965fcff7a024813232057a8074da557178bcef908243"
+      },
+      "roberta.encoder.layer.2.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4629dde94c7d25f3ecae9f6897bf5b4572d74ce687c7f993ddeac5d5210b8db2"
+      },
+      "roberta.encoder.layer.3.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7e2e6ba8c4ef09305fa8505689d2867794779c762e8a86181b53ab40cbb558d3"
+      },
+      "roberta.encoder.layer.3.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "deef6cb50aff6cf63425de59c53e89cf4ecc89c8558236e98b515c703c56f0f9"
+      },
+      "roberta.encoder.layer.3.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f8f0a592b220410048c0c5d6fae52054e51c3c8ac89bb47f6a2147e767602b81"
+      },
+      "roberta.encoder.layer.3.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "889cf3ec4d045f32f69d6e4af8bb311b4114d5c9fe8f7b6eb7147f2e5fbc2523"
+      },
+      "roberta.encoder.layer.3.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "51e589b062c9890a6eb435de0ceaa65165c430cd36eccf44c9426d5e73ca6ac1"
+      },
+      "roberta.encoder.layer.3.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9ae03673344cd38a20c881b16c2ea2738cf6ac21dc66069be1e6fbdf25d2c240"
+      },
+      "roberta.encoder.layer.3.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "edb91e95e8aff11f4e4bb58bba2a36c03df21ae6424d027e32dea94e93325a23"
+      },
+      "roberta.encoder.layer.3.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7e5df1b5ea2b8aef371e7c1d5a5c619df773a9d980600cae0e291eddb1c7a903"
+      },
+      "roberta.encoder.layer.3.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e3ec1c6192dd4c9aab982da4d2cdb9a4e0edc8f6354401f532343449413d6346"
+      },
+      "roberta.encoder.layer.3.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "0e9941bf5b596e3a205fe14b6f03e584e9152c3375b07e151aad7e525e338954"
+      },
+      "roberta.encoder.layer.3.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "847527788ded88bef8697eb591435fe0db4917432e6f3c4ba554589c3ea25502"
+      },
+      "roberta.encoder.layer.3.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "0ed74aed142659de49676c672e6a47083758e6e948bb2a3a90778ad646556079"
+      },
+      "roberta.encoder.layer.3.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "be60c09b81e352b7bcc0105ae65785c9bf7ba5300c389d6ba93f45b67a7886c4"
+      },
+      "roberta.encoder.layer.3.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "50334f5512092afd740bdd64877704debc37fe0505f4c4529474ee68490eb8d7"
+      },
+      "roberta.encoder.layer.3.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fdb6931435fd81d9e4334c4230f6f81ebbe87bbc301de54ad3321199dc3d76e3"
+      },
+      "roberta.encoder.layer.3.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1cfc65c48ab6931085c95d97a81365659ec79e780a8be7163092c5b71e21f455"
+      },
+      "roberta.encoder.layer.4.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b2530b586f984b6387d96e421fe46384db7c99ce4405c8e6b3970d410e6c8314"
+      },
+      "roberta.encoder.layer.4.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "47ccd260d00780319e8663d6546b23fcb0dc4fe99d6592dad51f062d612779f4"
+      },
+      "roberta.encoder.layer.4.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "96be949343dbca83b3b3cc4a00111ca9e9fb31cce0eaaaeb5e11539edff4f037"
+      },
+      "roberta.encoder.layer.4.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8aad49f4de932eea3fea67e1f5a0ad0ed3d2a2810d0923b3aaf49324735c9461"
+      },
+      "roberta.encoder.layer.4.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "893d1026a9a6715bd9933a2122f724f9a1f03494376a125dbdf52c62609fb67c"
+      },
+      "roberta.encoder.layer.4.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "351d34d41406616d0273e080ffe4edac9a1e1fac295e6cb4156f6edfaa031a5b"
+      },
+      "roberta.encoder.layer.4.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "96ef4cb8ccc30f6187257b657159ac619fb4933cf4b9913956facc95d6da7656"
+      },
+      "roberta.encoder.layer.4.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "13aac5cad96e32d066bc55e2a6bed8b0506a25bc1bbee6f50862862afbe0e8e1"
+      },
+      "roberta.encoder.layer.4.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "891087315cba4d006a0bd4745ab5bdd1c963636387074478e31a8786c4dd616c"
+      },
+      "roberta.encoder.layer.4.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1daf3ea96beafefa219acecdc306988c5f243f38462e100958599e4bcf44e5f5"
+      },
+      "roberta.encoder.layer.4.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d2c2e10a3c236994552e3288594212835a901df44a83ed512705c31334f4b17e"
+      },
+      "roberta.encoder.layer.4.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2ee34098435210bdf0aec16903f56debc40ba5c5487b8009f8ead6f913e44c96"
+      },
+      "roberta.encoder.layer.4.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8e79684f73344a55c5d24ce99584fa75ae5458fa476e82635eecd92a70177334"
+      },
+      "roberta.encoder.layer.4.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "cbf8d0637bbbe4f145a31b5b2d7d4dac6666f9f870d190225cadaa14d089abac"
+      },
+      "roberta.encoder.layer.4.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "dc4f30dfe4976611680c23270ac5cc0903cedb2c38d16159c285976ff90477b4"
+      },
+      "roberta.encoder.layer.4.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e0884dc70ceb3bd19bf9f88fdbcda6e37e76c60f6f46d28a4316b3e538a021c5"
+      },
+      "roberta.encoder.layer.5.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4b2216030680604ddb95eb67b7a1fcd1bbad24172f594d08ddd479b5c4fbce06"
+      },
+      "roberta.encoder.layer.5.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "96c65d5d1c314274b9cef00cea98f225e2c653711ab6f106b01046317d92598c"
+      },
+      "roberta.encoder.layer.5.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "548215a255ff3db02b4f2aedf8de5d179ee59984c8a505c62528681f5b25710f"
+      },
+      "roberta.encoder.layer.5.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3fb79fc1a4a4b34d368a055a46e83f3f6df6b30451f47c7f087532b22a6a11d4"
+      },
+      "roberta.encoder.layer.5.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4dce991e01121ca7061761dbd716fa6af8d79833aff95b9f8db143c10db9484d"
+      },
+      "roberta.encoder.layer.5.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "aebe7f3176114794a79ba15cdfb80312d38eb9a102b842098f1fe3e3b1b1d890"
+      },
+      "roberta.encoder.layer.5.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "33d1c8efc003883410c6119070dcd9d07a21dfa53fcd90f37ecd68b9c9205848"
+      },
+      "roberta.encoder.layer.5.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "72b921110c920d915bc1cbe2d095a1eef95e896d3913effb3130beec799d1f6a"
+      },
+      "roberta.encoder.layer.5.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "820eb4fbf0662f8fb21759b5bf56ef900cdfd037d2a553a3b7cf2c196d5788bd"
+      },
+      "roberta.encoder.layer.5.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4506a324816e9ba550a407681cb150a37aa9d68528835fcc52d7cf1ac1747a83"
+      },
+      "roberta.encoder.layer.5.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "63560405ca075c0d13a1d5a6b985927f9e7b856475ef4abbbc33343f1fa13be0"
+      },
+      "roberta.encoder.layer.5.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f9ee71730a3ab049fa57f585a4b970846751e05ab04da006f97c20bc968c16d2"
+      },
+      "roberta.encoder.layer.5.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "37c1db606ea93ab0866e0f5491f4fdd832af9f33ea75e13e7d857deb6894b0f1"
+      },
+      "roberta.encoder.layer.5.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "faf7241809050d9f312d47bedc43a256cda47e6c6d7ec5564b6972e6eb2fd2b4"
+      },
+      "roberta.encoder.layer.5.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "cf2ca82cd4e36621f85f1fcc8c6b13f3d4a10baa4facbd86121072ff1ff5364a"
+      },
+      "roberta.encoder.layer.5.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f2f3d21818169c121805bb245038d153938d84870a7eca050d5eb5c0a01d1816"
+      },
+      "roberta.encoder.layer.6.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ae44eda4c21c7d2bab15027b480699059f8ce99c139e94c92479996f5ae99b8f"
+      },
+      "roberta.encoder.layer.6.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "072733b224dd45304a285bac22f7c4a8e092ec4638884b68bc6a9089f8f14284"
+      },
+      "roberta.encoder.layer.6.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c91db31f3c4ffd2b5e01e1e9e66f24ca225ec5e8abcb067b3eccdd0fbd216c40"
+      },
+      "roberta.encoder.layer.6.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4f888b79f908a199d2f031fe54f74b60fb2923d81ad7094b34032a8af3bc8b5c"
+      },
+      "roberta.encoder.layer.6.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bc8e031684f7d66b8948cc9a17a807b5812e21de6f6b378fdbcf23eda21bce29"
+      },
+      "roberta.encoder.layer.6.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ff395cb738865d830c70c83637a56faef7d79efab730cf1a0d4b2209af1fbdea"
+      },
+      "roberta.encoder.layer.6.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6c63e5b22a5cc1490089f37a5c4f9416c0b233b8113028b18a7ad0898a130e90"
+      },
+      "roberta.encoder.layer.6.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "814eec5eb6b97242b59374260d2b09d03ce82c92e4b01162342ed71ffff15c3d"
+      },
+      "roberta.encoder.layer.6.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "cc4cbfb90814356b3c62d62d53c3c87331cfce953962680fdaceb4eba56e41a4"
+      },
+      "roberta.encoder.layer.6.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f9a9407ca951c0d467dcb7010a3897da5b5b78573050294637c5b1258609584f"
+      },
+      "roberta.encoder.layer.6.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bc3ebb385be07308165ab89e2a4d4ae8b6f2515ba20cccf6faf6a4723abafa28"
+      },
+      "roberta.encoder.layer.6.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a16554af571281f932b92428aa38eaa1a7ba6db137488684bbe657712f68d0f3"
+      },
+      "roberta.encoder.layer.6.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3e1fe6c7387c46eb3e5a32224e005b297a507ab3588d47b6f60c81c0f09610c0"
+      },
+      "roberta.encoder.layer.6.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "509b9872aa43954f84473c0dcbc20a4fb17e48acd3ad72113d714d058a0e4d00"
+      },
+      "roberta.encoder.layer.6.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "0a15570719f0f2e444e4e10fbf2a47e3709e9c89a634b8ba1f6475fc9d179bac"
+      },
+      "roberta.encoder.layer.6.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "12f21265f2652a4781153f4f46cd68b2935adaff42a753e71e9a5f732befb111"
+      },
+      "roberta.encoder.layer.7.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7c025fa4b5ae34eb12c9c299d0a7603306ed741635e97a9f5c9fdbdbfee42a01"
+      },
+      "roberta.encoder.layer.7.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ac0b335b5899cd284f58efe16d88f1c00eced00bde6b65ea5cf99ed76b785830"
+      },
+      "roberta.encoder.layer.7.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8f2b1d184d5bc03abfab561c2ddade66c3ad8856ea42f17329985122b81c6308"
+      },
+      "roberta.encoder.layer.7.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ecd35f3fa70bdb0ff5ea8360db4f8c189af4dcfba85c04700cf288221ce7cdc1"
+      },
+      "roberta.encoder.layer.7.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b8e00e71b06b1bfd365fdf345febb1b4a8fb715c28c8c46f725956dd1c1f357c"
+      },
+      "roberta.encoder.layer.7.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d03c3a63e43113646eed914a346ab9066a38ce5e069eb07ba27995770e1ba796"
+      },
+      "roberta.encoder.layer.7.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "208e0bca92bc95bf2ee3f0275ce804c9769480555fd7d816a7f6e57f77806bca"
+      },
+      "roberta.encoder.layer.7.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b71b4a6be9863faa4dcd51eb18f9c34ea7337c2547cf1ce8a30ab3def739dbe1"
+      },
+      "roberta.encoder.layer.7.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6165f6744da063d1fd5f3b0cb8dd11a9b33f05c14233e451b637096e9ca8989e"
+      },
+      "roberta.encoder.layer.7.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bb5c80252629cf9142f7b45c6bc6ae2a74fde75ca1e6272459b0b995d34e288e"
+      },
+      "roberta.encoder.layer.7.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "23bc34b3990d0ddbb809c0834af7b792518c7a0742d1b18a4183f739730f3753"
+      },
+      "roberta.encoder.layer.7.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "518c3ab44e46419f0b8c632de238d8de28834a6e5e18bb41c70a026b04f0addd"
+      },
+      "roberta.encoder.layer.7.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "53b16e16608ba78ef2f2ec4221a4c1864ab7b8a27866f06817d3dfb23e835320"
+      },
+      "roberta.encoder.layer.7.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e4840f2890e70a462dd01eb4935473a8ff33199c2e05b5f98935ee4760da48e4"
+      },
+      "roberta.encoder.layer.7.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "69023bf1dfd19a03f0ab3d606cacf4dbdf0831afda8fd5499ca84acdcaac805f"
+      },
+      "roberta.encoder.layer.7.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3de1d580c8204eac954f64ea9734bcbbf93658fdbce82f0f2acb39e944935c27"
+      },
+      "roberta.encoder.layer.8.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6436cae30361e2f37c677f0679da755fd6214782d1b63e9e4771b626e9cf40c8"
+      },
+      "roberta.encoder.layer.8.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a2263d5a874627e7bd370d2ea15fed7206805dab74dbf4b67110af8351f857a5"
+      },
+      "roberta.encoder.layer.8.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "00e22670498369b34f36273b789112a1f0546fa3ff699a9face4dfff9787ba1b"
+      },
+      "roberta.encoder.layer.8.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c584cc105ec2dc59038cc2feac45c8927c54f8361275032988de8a6d9f91156b"
+      },
+      "roberta.encoder.layer.8.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bbf7c210183a7ce7a7140cbb6bccd32225faca49c18153ae80173ab020a549b4"
+      },
+      "roberta.encoder.layer.8.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "eeedbfa3065544780947b8553b35a7016d47461bcecc996fda1fc6d604ebac79"
+      },
+      "roberta.encoder.layer.8.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d96da9b2f8618797bf18f6069566f00db404dd3c29db66894d21506009c8092f"
+      },
+      "roberta.encoder.layer.8.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1bd4e2396278b99211cd1219e93ba95fa5c3048e9465e493e78b23d2e51f4fde"
+      },
+      "roberta.encoder.layer.8.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "39ff877e911095c9069b2343a661d02e545068620314b0219f26846e523ac972"
+      },
+      "roberta.encoder.layer.8.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "82f002416c718c333ee3ec35e3fd67bbc8356529ddb86e69eb165eaad9942b93"
+      },
+      "roberta.encoder.layer.8.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "965e6f5782f9dda3720ec8248edc7b3e3bf4a04dcd16f24bdb3f7916ac7bd4ac"
+      },
+      "roberta.encoder.layer.8.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "11ac1705cda1a2fcd35c1ec191af77af57b98de939058a7ac5aa833014b9bfe6"
+      },
+      "roberta.encoder.layer.8.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e080d417510536c089ad2a92350d1b3540832d46c8d58dd12022c75b64797635"
+      },
+      "roberta.encoder.layer.8.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bcd3c257a03d9de31a51828bfe09e4106057e9328ac54dd49ecfe0b5cb902e3f"
+      },
+      "roberta.encoder.layer.8.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "72621dec05fe709d3ee8714071096281654adc51b6ade46f2371bc472a3194e9"
+      },
+      "roberta.encoder.layer.8.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c10699b073ecdeb75c42fa8bb3a73f9970a4ae9b7d379726dcb69549eed24601"
+      },
+      "roberta.encoder.layer.9.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7b810109c8e9550951d99405053b0f8e868dfb8b7813d1b13f5dd5a760f0e66b"
+      },
+      "roberta.encoder.layer.9.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "284d83c8c396f7dd0861dee106e3fcb4d01607fcb6f518038193406c4b34d64b"
+      },
+      "roberta.encoder.layer.9.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b8cc1c456a9bc465284227b3878612981f8a51d59fc8da96ef0d7740f79b4b3b"
+      },
+      "roberta.encoder.layer.9.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1f01dff2080be3a311015f9f09530386e98aa166139e492a384d9c216e07dd61"
+      },
+      "roberta.encoder.layer.9.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "50c9671bc5364330a5c2c6c5799df607dbe1be668868a0029f56a50721c2f2b3"
+      },
+      "roberta.encoder.layer.9.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c7217db1936117a5662f9eafd20b1f398e09a5c1f2cd8bf7ccf598b69c913c21"
+      },
+      "roberta.encoder.layer.9.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "494942e27503945375341ad857c9d22f23aea30184cc75352e253f2780520aa3"
+      },
+      "roberta.encoder.layer.9.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2652302110b5260a6172d7bfd57baa3e20d028d0ddedb4d7610e4482fd7589a7"
+      },
+      "roberta.encoder.layer.9.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2279195a2aac64966504b8bd92762cdf61bb04e51d5bcf9bf6064db812dc46a4"
+      },
+      "roberta.encoder.layer.9.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "46dd603e83a1188c0a99a0c24d700b687396d83d529efed18a678c88564feb6b"
+      },
+      "roberta.encoder.layer.9.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9b091dc029c7f776433244fde57a15d1f34543bcafbdea9c6090b88217f4cda5"
+      },
+      "roberta.encoder.layer.9.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bcb0ff801bbd8f35a93216d81520dff57a2af56b0ca7515a3e3d8659ca5622b2"
+      },
+      "roberta.encoder.layer.9.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e6507103544b0f47c253062e1fbeaef6e2cce835377bfb5cbf9ade343cb570f1"
+      },
+      "roberta.encoder.layer.9.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "eb4ab550b8aa31722dd8543cbe01714b9877cc31b84c78f11ec73a92ccb1848c"
+      },
+      "roberta.encoder.layer.9.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "de66de17be3ef40ecfe565023fd700a53bb29f6c64199639ef23cd95746e5d14"
+      },
+      "roberta.encoder.layer.9.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e5b21b08dfbf86c6b643f8eb5004538c21d1fd059830e92eeb0e8f1d19aeb246"
+      },
+      "roberta.encoder.layer.10.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7ffd365aaf1bb9919782e2de3c308d1d9a740d7f102c645825b4d902deda67d3"
+      },
+      "roberta.encoder.layer.10.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b711849bc0affb53152639333700fcd6b420f358c0d0b2c64840c5e9a8e13e2e"
+      },
+      "roberta.encoder.layer.10.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "09cb5b9929b701dcba6a31cc0490d18a93e369e9067235e609097366a29f5571"
+      },
+      "roberta.encoder.layer.10.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "335a2ce58209b4f8fcb5bd03ac6da275accd9c611f58d229085914ed3c7c7150"
+      },
+      "roberta.encoder.layer.10.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "370d85af977015ff0a1c93f8165e99d1ef76ea7ed41746c9b51f083d266595ea"
+      },
+      "roberta.encoder.layer.10.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "77134a024e43c2ac16abe8260e20366ee22ebd925fb8cd795c87235cb55fd95a"
+      },
+      "roberta.encoder.layer.10.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4c67163311f31a22f86ae663e7a355cd7ce0f9cff53f6da7061d0049404bac80"
+      },
+      "roberta.encoder.layer.10.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b830026ef6fe2ffc4024cc21844b7e12fd8b5d7519b7917c25cd37bc1ed85b07"
+      },
+      "roberta.encoder.layer.10.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "069ac3629db6718a42d0edc9496807d9a31c1e35be64cd562288f400275433db"
+      },
+      "roberta.encoder.layer.10.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "52534658b94aed2aac4e09a49070f44740739a1d27d0ccf1ab2b412f91e1d127"
+      },
+      "roberta.encoder.layer.10.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5e994ff33985054b3321258e59642e4dac403d2ad33d68b20d1fecb5595fcfb7"
+      },
+      "roberta.encoder.layer.10.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2ddf97448f7d58d74ff341e33e5b764af30a3ae01401cb4b70a37844265d8357"
+      },
+      "roberta.encoder.layer.10.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4e77ba6943d46d60ffa0e1073c212f7eabcaa90453f56edf6f95fc1dabb7783f"
+      },
+      "roberta.encoder.layer.10.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "921111d282089e63c772f6e8dad4ad125eefd0894bd0abfcedd1a8ded18f2992"
+      },
+      "roberta.encoder.layer.10.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "37941feb828d3e8fd529000d4c20afda493717bcc2a667c0c3ba726601c3cd84"
+      },
+      "roberta.encoder.layer.10.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e3fb94dab8c2d1d70af99d1ae1d4b2a4e47fe69510b115978e5f2a6649892ef2"
+      },
+      "roberta.encoder.layer.11.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fb8e3404a5eb6e8923a04753bea9f566d3214e95cdc9e1c1534d5630bfb558cb"
+      },
+      "roberta.encoder.layer.11.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "24ee42e7f50d7c327f885ef0a8fe43d5f6286cd221c10137e0162bf8bcadbe19"
+      },
+      "roberta.encoder.layer.11.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "50ce7c8b14e41a352005b5a5cab28396cd3282df9331e1285b2eeee2d885472b"
+      },
+      "roberta.encoder.layer.11.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d69e1f20c5a95057a002678f03ea2ffc41e2e489bc0b7ba0b897803e1ddf0800"
+      },
+      "roberta.encoder.layer.11.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e3f55d66f5c53ba9df756b312d4a6885474501db2a7510c615faf8cc82d5a74e"
+      },
+      "roberta.encoder.layer.11.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "459e3071f118a0bc3b0dfc9034d9bf4ec2e835eea4975f7fb2fa7fea25cf6cbc"
+      },
+      "roberta.encoder.layer.11.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f0bbcae4bcd1acf2e1723111dd2c0e9c335c27d3212e1fbc04d499db309adf82"
+      },
+      "roberta.encoder.layer.11.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1f64f18900cc11862e9f205304580729f73a72e9ed13b2ce13089b14e8a13a9f"
+      },
+      "roberta.encoder.layer.11.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b4ca69c644ffaaeee94dba24976ea248e2768c9b604749dc8b9c969aa5582300"
+      },
+      "roberta.encoder.layer.11.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d6426064d15b77afd57a9689b8f3d62b1e7993fc54ba7c91186f8f8a9ad13aa7"
+      },
+      "roberta.encoder.layer.11.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3b199a818660037604c84270580a0a22ec6f1bc1f195f8c92c36336c5cf51752"
+      },
+      "roberta.encoder.layer.11.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "967063891e6d2f8832c97c06b9c607a4cfd1bccdc8054af7081872ed9cf60135"
+      },
+      "roberta.encoder.layer.11.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1d45d175a59f53596da4deb3c8a9579d31b588f8ddd93450a2dc06597bab28e4"
+      },
+      "roberta.encoder.layer.11.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "494ce759d32ec31d73fa61e900672515d992f890e4d033eaaec2d24b3372ff40"
+      },
+      "roberta.encoder.layer.11.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7395ff2544defde89b4fca6b5c8dc8e41b18ebdf7e2992839823a2c9ca5f22c5"
+      },
+      "roberta.encoder.layer.11.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7f05c353cacfc96b5729363c34602984ee98b6e849215d5c56b9473a65b324ec"
+      },
+      "classifier.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "287d67350e4450667d413089f9575823308108eb11e893691248f1ec4fd4d5ab"
+      },
+      "classifier.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "cc4b75aa1dea88450814beb3ed12949f1082544b16c76044b0fd50269f1ad7e7"
+      },
+      "classifier.out_proj.weight": {
+        "shape": [
+          9,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ba7d928cf2cb4cef52c47102b4cc29134201bd16032c02a5542fd7e09d7d0af1"
+      },
+      "classifier.out_proj.bias": {
+        "shape": [
+          9
+        ],
+        "dtype": "torch.float32",
+        "sha256": "0ec404fc42d8d83ef5955f40488346a65fbbe4f060651aefecad028e141461a6"
+      }
+    },
+    {
+      "roberta.embeddings.word_embeddings.weight": {
+        "shape": [
+          32000,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "0acc1f3a95baea88c2d1da3d503930dcdf7a68ec13b549ea81b455156fce84eb"
+      },
+      "roberta.embeddings.position_embeddings.weight": {
+        "shape": [
+          514,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "99c61a4649fa4b54ce7f128442e188d46631825db732ba72deb0115ac16e6469"
+      },
+      "roberta.embeddings.token_type_embeddings.weight": {
+        "shape": [
+          1,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b996cb3741ff62f069834e44a43081163b75c9e3156bc7e186d0ccccc934f7cd"
+      },
+      "roberta.embeddings.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d2964f037a9f14c119b0696e029a22bd79bae193678e20e5e243367af211f188"
+      },
+      "roberta.embeddings.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2de2640ba2f21ffbdd488d9d4b8b3f90b76dfeec3cbd55c2366502691ccbf0ca"
+      },
+      "roberta.encoder.layer.0.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1f24ce7eaf1b5c17ba1a54daa6e19a6da81228bb99ff3693c256c68d0a8ae7a5"
+      },
+      "roberta.encoder.layer.0.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3dfda41a49adfa77f5ce71ee40a0bb28f6fc4ffb97a7f46174318f478d6d2c2e"
+      },
+      "roberta.encoder.layer.0.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "991381c39e6c6dd80e81a22df3058227d5bd35bb6c8002b136c97564da066360"
+      },
+      "roberta.encoder.layer.0.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "348f3ef5854294837591b2b52e600e238baa4a5acdf8143f52d7ea9a4960adc8"
+      },
+      "roberta.encoder.layer.0.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "910d07bca33106cc4890cbce9fe50ab633f23448b5ab6191686a7578a4305c51"
+      },
+      "roberta.encoder.layer.0.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "03114863f0a73bd963b5cafa86f83da384a92e6c749129395fb2c89650c2b32c"
+      },
+      "roberta.encoder.layer.0.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "0d238bd5eb1b34bc1766561dcd8348a78dfdad7b0402f8502abaeb454841cfdc"
+      },
+      "roberta.encoder.layer.0.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e95e183a2dac1cb99caf39dab415a38135fc4338fc07c96d372053f52c594c6c"
+      },
+      "roberta.encoder.layer.0.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8c2003c6f3a5ae1b0ac1562ee32f8888dd833468da0f0348a26049ff93d1444d"
+      },
+      "roberta.encoder.layer.0.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "730e59a7a1595f0b6b8fd08c28e670054707c619bf81f1cf9da743dc919907bf"
+      },
+      "roberta.encoder.layer.0.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ac9abfaffb0feee2694fba0c2aac27593be74932ead1f13c3668e61e25782888"
+      },
+      "roberta.encoder.layer.0.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bf42fc9829a045f17c2a5e8a90ec21ef1cc61ab28e6c66650b0a90ca7fd144d9"
+      },
+      "roberta.encoder.layer.0.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "29faa5ed3f35091eefe61e330072d62a6b650efc0c127cf7a750d3bd2b051ae5"
+      },
+      "roberta.encoder.layer.0.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "03b4e55b91926acab7e470c93ee0aafaa1257bf9ebc1109f42fd44f548ff6402"
+      },
+      "roberta.encoder.layer.0.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f30bac43e3435df66add0969aa51f74bc032dc33592c59039669c2e23f90641e"
+      },
+      "roberta.encoder.layer.0.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2d36798874b7b701b5cb5ad419eb50cedea25cff01620d607e6d489f41a1ea3d"
+      },
+      "roberta.encoder.layer.1.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "45c010d598552180158ed2a02fb75aeea1d14768df679f4d9a7b9123a46b640f"
+      },
+      "roberta.encoder.layer.1.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e41671cbe8e5cfaf740e63574cba305e550b37a7ad39f271ef18fee71e2609d1"
+      },
+      "roberta.encoder.layer.1.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "571afa48563d855f2a35dd0d4f519217871380351003ce1d525b60d51bb0b288"
+      },
+      "roberta.encoder.layer.1.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "74b25283d42e05ad9b08a18bd39dc488dbae098cacb37234163e455f48c9f425"
+      },
+      "roberta.encoder.layer.1.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a034eb4efc76459d6a6bebe2c63aef4d4c38005176a35129ac33c4f42189276e"
+      },
+      "roberta.encoder.layer.1.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3dc5342a6337c97326e394d779a55664c7dea6b6bff22f1e0dbd70f129ae673e"
+      },
+      "roberta.encoder.layer.1.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ea29a03832ee07eed3c50f661caebf1bb4bef042b487d55d7c9edfa173512685"
+      },
+      "roberta.encoder.layer.1.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "93d1bec0d871d91134e68e94641e5ac464d97817209675c71d42018e7b978342"
+      },
+      "roberta.encoder.layer.1.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "dd7c0e5a2e8b6f38a793ed2a8b794b7a1bcf6e38b6f4a18a4e6ef7c813daff11"
+      },
+      "roberta.encoder.layer.1.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4abb84d5a1f68413ac70922b07d24d354ecbdc2fe5415a47978e035d2c97e6ef"
+      },
+      "roberta.encoder.layer.1.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4a9ddbc4b06b14a3ceddbc6cf32ce861a5b9b47fbe42ec58f59f2d90a9e10b49"
+      },
+      "roberta.encoder.layer.1.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "21b040a8a327148f3846ef9367271cec2fe32a7dca47932bb70dcc529e2e9dde"
+      },
+      "roberta.encoder.layer.1.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "0fe01720c3d2b9469e144574420cd5b0ff8648efd10942708f9237f1d689ebad"
+      },
+      "roberta.encoder.layer.1.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d16f2811dc3f5284ed8fd8b27180155b83bc07ad71acc49a6ab2d1b6a47e1451"
+      },
+      "roberta.encoder.layer.1.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "552cba1f4bdb92efd88993770f37ac0d9561a63cde3be4d4360c18dd67308e71"
+      },
+      "roberta.encoder.layer.1.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "dc54bbf2644abb02f8b8a6b6fafec18d84817fe2799ef66d2cadddc646d6bc67"
+      },
+      "roberta.encoder.layer.2.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bd6c58f45b1778c76c2763e5b8091118931d5ee6d0ff108a508e90cb89ff177c"
+      },
+      "roberta.encoder.layer.2.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c44be67c8f81e0ad1c570c749ce9870a2659819f1df09507b94cfac24cbfff50"
+      },
+      "roberta.encoder.layer.2.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e4ac08eeae50db41aa7ca055f915283b3f81cb9ca21c08231417c6970625305b"
+      },
+      "roberta.encoder.layer.2.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d8a1d653e854ddec52da306b2e5dc226cc6b208de4fc1bd4339f4b62bed13a85"
+      },
+      "roberta.encoder.layer.2.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "dd654662ecffd1b625121a3f28c0850f991a0ef5b5239a5e460e59e63da9a8dc"
+      },
+      "roberta.encoder.layer.2.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fe9c28f360ecb172c2dcac47ad96ed167981e1d60091c4b59684a7ba3049fc93"
+      },
+      "roberta.encoder.layer.2.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "749e8d624f5d11365c6939948e84d3cf8f7027fb03dfb9408ba8763880bb80cb"
+      },
+      "roberta.encoder.layer.2.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "cfba64e7b5c9e1996d7c491a7b73f983cff07696cb6029c4917c92f093648544"
+      },
+      "roberta.encoder.layer.2.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f1ee9314e27612eb43cd8333ba5e5eb55665dbc09e001e70638cf733a36b8440"
+      },
+      "roberta.encoder.layer.2.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "950225ad4fdadfb9a9f688670b2dbcc4247481cd1a9558b5c2ea5bb1d4512817"
+      },
+      "roberta.encoder.layer.2.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6154320d4cead63c642934bfa48ff2a762743095ebe7f66c2e80d0715b0fafc2"
+      },
+      "roberta.encoder.layer.2.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6116dae07716991f0c520bbf417de6e13dd0ad540ff034a806c6e740c1788609"
+      },
+      "roberta.encoder.layer.2.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "da3ab5a68cca86a5cc5c02aa41dae8132befee767d221e1e34d499f70d5361e4"
+      },
+      "roberta.encoder.layer.2.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "621e67e1dc6a49ec0a34646c0d6ef5a3d2be6c6a13502970fbc0aa91dd5db12f"
+      },
+      "roberta.encoder.layer.2.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c8cbd7d716c4a20434bfeab317ffe0b87dd7258acea780dbfdc8783c2ed0ee41"
+      },
+      "roberta.encoder.layer.2.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c417c4c2a965b4b81df4d99198118e21d0f32698f775ac3714ed102f02ed731b"
+      },
+      "roberta.encoder.layer.3.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "918d3e3cbb1dad3780615ae573a1e3bbc22c3676c1caf6333ab504c69d573447"
+      },
+      "roberta.encoder.layer.3.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3140f7f6d889199f81d23a18324e564170ed8077c6df7a66434fef2ee5dda862"
+      },
+      "roberta.encoder.layer.3.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3a6a0001e031f20214170668bd7cf5bc4496a54ff97e7d08d7d6e50c01ec6d82"
+      },
+      "roberta.encoder.layer.3.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8fdc1fc86a75c1549c8c2bce464ac1d867e76b9025b791344971b6b9efe87454"
+      },
+      "roberta.encoder.layer.3.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6d2d75ab2ca2669064ae22b1b8833a991ec6eeb1e2a8045157152ce8f017998d"
+      },
+      "roberta.encoder.layer.3.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d1735502d682cbbe476d3ffac906a62e6b5c5d1ae850fcead64bfef4a1e76beb"
+      },
+      "roberta.encoder.layer.3.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "46f05577117e71aa77501e6148742bfc73e13840ac1f92c06b53093e2edb9db0"
+      },
+      "roberta.encoder.layer.3.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "0e37675a41ed2ea3db13b34a783ca5c2a3af3400e1df27057cfdb15bc0c711d1"
+      },
+      "roberta.encoder.layer.3.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "47eb5c312e179e8b539987b29c6a3c344366fa1bf9cfaf1da157a2abf833b0b8"
+      },
+      "roberta.encoder.layer.3.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f8a36e091b252f85b3a0876e77f880b158d92422e057ec03d387c0473848a766"
+      },
+      "roberta.encoder.layer.3.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ee97604de7f989ac7b26ea2f17cecb1577c38f1ee262cf51f686993d601187aa"
+      },
+      "roberta.encoder.layer.3.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "20dddcc197a80587c903a201850c459c2061c068061ba794e1c2d73c263a08d9"
+      },
+      "roberta.encoder.layer.3.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e866e49cf07959899b8b7137eb12497677c39ba973d46cfe2c46bfb02f676fd5"
+      },
+      "roberta.encoder.layer.3.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "328e50ae1f8e10b7fc4ebf09971d4e7f1dc9ecd8fa6a04d0d15845b5c61545c7"
+      },
+      "roberta.encoder.layer.3.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e490b40934cd8495af5f60cfb094975269835667ee9ea20af94bc407cf24e8b7"
+      },
+      "roberta.encoder.layer.3.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e1764a1e56efabc917cb76593319a2b9a7634794d5d922dfc44f78794eb37313"
+      },
+      "roberta.encoder.layer.4.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "15ced297db5ce30e8eed15fda4fd13e6ebbcbef6e687fb55f202ad4844c40389"
+      },
+      "roberta.encoder.layer.4.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "cf51b758c761410a10280767e88a754e485d477615fdcf4b43384182429d7bdc"
+      },
+      "roberta.encoder.layer.4.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c0eff139514ebf1686b9e9b2fcee974d97fb1658ba2bf7ffae710738890d803b"
+      },
+      "roberta.encoder.layer.4.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4abe31fcd207b36f4e63d9151caf1371a9be22b9d225471fbb13c58457bf35fe"
+      },
+      "roberta.encoder.layer.4.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bc70dcdc0922a01159a34d9071daba2e3bde7972c2e17f4c0dd34c64e7e3f590"
+      },
+      "roberta.encoder.layer.4.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "78c87ef0845041735a3b5e0fa96519c7f7d73c9d0a8bdbfb974d5637581e0110"
+      },
+      "roberta.encoder.layer.4.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "690844dda57b43980d302f37a1fa2f2dee139b6b4682518773483bb1d305ef0d"
+      },
+      "roberta.encoder.layer.4.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6b7b158e7f0080f5c9a8e09d4ab981a6a52223ab463e0f0d5b0d392d8fcdc458"
+      },
+      "roberta.encoder.layer.4.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f45e0538558e8598546d3176ff81ea91e6b65553e7f142e4e027843b794df50f"
+      },
+      "roberta.encoder.layer.4.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "dfb16a73bd4d18e2c55f09192dd8a955ce4f8df2d5fb513d592c484dacefbfd5"
+      },
+      "roberta.encoder.layer.4.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "eb9e231f45f17e6907efd78189db0da56a6da7b19e94367b9733e8997478538d"
+      },
+      "roberta.encoder.layer.4.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e9320f2715040f5b87b0c64b3c61415dbcce17b9f72cb09343a2fac95d1fc51f"
+      },
+      "roberta.encoder.layer.4.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9ab559317ffc925af80b1716845b254a3aadd94c0f0ef34b8c230b4b7ba50a4f"
+      },
+      "roberta.encoder.layer.4.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c1cb5999602fd7ad6d6b4326ac950b23d58eac5a4b94abb7fd2e6f9689d55d97"
+      },
+      "roberta.encoder.layer.4.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3dc56810171ede4bc99b624eeb0077a232584547f4f9f3bb0691f165bdbf7c44"
+      },
+      "roberta.encoder.layer.4.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b1f8d0ed5f636cd5f94080a0c1613cccd1d77eb86c5bae7d4775c1b4b746f73e"
+      },
+      "roberta.encoder.layer.5.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b3fc2a52fede71ce8420cb6ccf53af2a9ba67fd537a7b0a7e04fb0ce18e53b31"
+      },
+      "roberta.encoder.layer.5.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "52aab2348a01422fa2872dfe14a536a344f5e4d23e5beb6737313a6dd6417919"
+      },
+      "roberta.encoder.layer.5.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b21232f2309bfc0411985a327321a1d219949788e4217a406aa92161c0a3ab1b"
+      },
+      "roberta.encoder.layer.5.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7618bf188729631668e07a638267c125a90cbfe963e6b0be260f8523360d186c"
+      },
+      "roberta.encoder.layer.5.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4d7702fda44382121b5cbd51ba93930e17ac15663aff290d78acc44684691de0"
+      },
+      "roberta.encoder.layer.5.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "239e6a5e80ba1c8c0f42c2ad5321ab78f8182cc3bb918196ed6d801a7c1902f5"
+      },
+      "roberta.encoder.layer.5.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4322200dfdf1d6aac3adb1583dfda5b6bc41337da90472e2ca14b49adb813e81"
+      },
+      "roberta.encoder.layer.5.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b6aa75ccca1381d1d97471e17b9cccedb9327a29ef5aea71d822205f43bb9886"
+      },
+      "roberta.encoder.layer.5.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "aa25863605785221eef8b706ed8b6e4f01e821c910b9ffec97a6cd5e270b912e"
+      },
+      "roberta.encoder.layer.5.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5990f119bccc8ee2f5c6e39b5a8eacf70e536448ce90132cb85a9546fae6304b"
+      },
+      "roberta.encoder.layer.5.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "357d21058d4e17989b3d35195801a6a3b0ed5691b20f9ffb83e372cc417eb054"
+      },
+      "roberta.encoder.layer.5.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "abf4a0b86df3719d1498de4f15e5cb09de0cdfe41ddb483e2c9c347ce624a973"
+      },
+      "roberta.encoder.layer.5.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a53dd46eda5301d2e6c7bc6dd912c70baf9ca5d7dbb6869ba9e25b49336e6a15"
+      },
+      "roberta.encoder.layer.5.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "59fbd35ea175e64437a153fa5dde5f3c26c7a0e9c083c64b3621a58c70dd3f4f"
+      },
+      "roberta.encoder.layer.5.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "10e088b6d5b33c1f8f9c87c0057086790bce5211b9cef4b6fe080106e8a0a286"
+      },
+      "roberta.encoder.layer.5.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "09009d56a484eb6cd6ce834d163ae280367d8d2f1e714d5802a0a291d8ffe7ca"
+      },
+      "roberta.encoder.layer.6.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "56c9894c23711d8c3288a1fea294979f2b9a140bba4fa506d50df09956e42156"
+      },
+      "roberta.encoder.layer.6.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "0ea5c27b0403afb5204248ee41a2120f6e605b89009403881f0938a42d71f393"
+      },
+      "roberta.encoder.layer.6.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6c3d7b884501b6017409827c96976ea145628398ebdd245c1097a7ba98a3f050"
+      },
+      "roberta.encoder.layer.6.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "de156c8a0a0b4e6d17a246710924cb0aa5675b72e3eab8abc7bd339c0da98691"
+      },
+      "roberta.encoder.layer.6.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c07a483294ed6e5e52ec60b72d48ee5770967b266bd2931a17012d0c4cbf08bf"
+      },
+      "roberta.encoder.layer.6.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "caf0bf574ad3e0132b0a5c3a1e698ecb924ed3fcfefa6639058a3e5d13776583"
+      },
+      "roberta.encoder.layer.6.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9ed789b40a83338b11436f498b98420c04f408b801e5af8013d8bdecf0f894f4"
+      },
+      "roberta.encoder.layer.6.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5cc76c3174e459b6429caa358361e2c7e295ad87e22b9b4ec899e8efba3ac502"
+      },
+      "roberta.encoder.layer.6.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "61d1b23c3479e52abb9fbb780e46b71104b88cabab5f3ca36ddf12ab3845deab"
+      },
+      "roberta.encoder.layer.6.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "672da4a9cffd179cf2bd20446b39c5cb69307db99e5d9a743f16c5eba8f8ceeb"
+      },
+      "roberta.encoder.layer.6.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "24ad94b25cbe5118e205f2cd8b97706c52082004ca9fabcd99e11d08382c2867"
+      },
+      "roberta.encoder.layer.6.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5d43148b65a9ba0b6ab6d58745c7632507b9101c995b35ad10025b776ff0a1b7"
+      },
+      "roberta.encoder.layer.6.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "cc053bcaba91ef66ae9d342534d54f63318ec9d2b900101a3cd627fc9ab6a432"
+      },
+      "roberta.encoder.layer.6.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d83fb13d3e046171fda0a98b83abd53549ba7c3f4eb94bf71ada36819892e8d2"
+      },
+      "roberta.encoder.layer.6.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fee22827f51ba8fe8f89dd96dfc94077236bc3b2425fbea9374ecae0be289ebe"
+      },
+      "roberta.encoder.layer.6.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "544f78e1116d0cd6420d261147e318e574abe5d8e2f6bdad81694142698b2e52"
+      },
+      "roberta.encoder.layer.7.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "098a02ee7e74e60387d4db745dcd42841a94b5c21906a1866794f73eb96aa48b"
+      },
+      "roberta.encoder.layer.7.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "aa11ffe00de9b0ee826802eeee2ef0bac2322cda3f5fa1c8d813137da7072c8e"
+      },
+      "roberta.encoder.layer.7.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f6b5f4eca4f5633c89b55c835c4a59973ac0846bffa924cfca6452f40506839d"
+      },
+      "roberta.encoder.layer.7.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8d8a6e4df3bbd3e425dabe8d86a369f278e1c8de82a615bf032bb30cc6d30f01"
+      },
+      "roberta.encoder.layer.7.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "0a4f58984af574eb3f416fa7971bf691843bcb4c3342f7a6467070267e957d7d"
+      },
+      "roberta.encoder.layer.7.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "eb2d08a0b1a9f21ddc76f2e3c8bebc7ad38650f54695d46a92fca0c54c40f5e9"
+      },
+      "roberta.encoder.layer.7.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8db663bc973b6a9da88dfcb4d41043a2bdd26064289c6201001b58dff5f67103"
+      },
+      "roberta.encoder.layer.7.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ad938de7407ba380b161ec27dce769ae7be03351f04d7787c63f87398f0a1ac5"
+      },
+      "roberta.encoder.layer.7.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ae424a68ca5b1f7e94b86fd45be981d2da22aff043c225534fbce787ce702b7a"
+      },
+      "roberta.encoder.layer.7.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fef6beaa0aa2065ab86eba6eea454c19fbaab2ff57b3424b18d543af6137f24e"
+      },
+      "roberta.encoder.layer.7.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a5c5e56d75c8cf9755cf678de3fe23e9c1ff80256386cb37f658a80d81c48816"
+      },
+      "roberta.encoder.layer.7.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "51075b004cf029c2935b9caccb1e517f0fa9f98e068c61a389938feb05bc7089"
+      },
+      "roberta.encoder.layer.7.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "45221fcb36fd7da894779ad9309f33b8924e8e692b594655f59e46b9e9b04796"
+      },
+      "roberta.encoder.layer.7.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b61fe16d417af371ec1ce753e104958219503b24765b90c03ec11df7697d029b"
+      },
+      "roberta.encoder.layer.7.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "abea467b05821f88f11ce2c6f1c76e1340862ae1ff281cb9b7a37ad6f75ae910"
+      },
+      "roberta.encoder.layer.7.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f754e09bab4670c8d5c6869eefafab19ff2f6739a48ad833fd264c4c4cecced0"
+      },
+      "roberta.encoder.layer.8.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a3dde1bb1eb95ef37ccd7dfbc9281daf7027eeb1f687cb16a6e98dc6a416d602"
+      },
+      "roberta.encoder.layer.8.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ad06a7a055941300d4f4c48cdf034fb8cbd3210905604887f25085d5d97df28e"
+      },
+      "roberta.encoder.layer.8.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9a1aa7fc68efcdfd662efb2c682d8ee39f77febee9c74c8d6f3faea8bcf2fb4e"
+      },
+      "roberta.encoder.layer.8.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d12886541d2f3c6ec3942c2c5eca79250fffa88f5278cdf3a981cc41a252326b"
+      },
+      "roberta.encoder.layer.8.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "962d01c6af0716baf879fe49439ed12d678e3e245d5591057c64534c3a32d1ed"
+      },
+      "roberta.encoder.layer.8.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "799147c98dcce69123a6063f539d92f302796fcbb59bd94d93cf3ece066b28a5"
+      },
+      "roberta.encoder.layer.8.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "11f4ed210a26de24234ed28c6cc2ffe3e754800a46193301a1c240cee24b28e1"
+      },
+      "roberta.encoder.layer.8.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "60ba36bf6d20160ffcedc7a42c4196ce1950c3df7ce4d1e12f4b1f9c4a7bb129"
+      },
+      "roberta.encoder.layer.8.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "161eade18c50c6ea521f531d2e845608b20c7ccfc645d5178ecc70c6de89890e"
+      },
+      "roberta.encoder.layer.8.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "c31dc9117853614eaf2559fec99056869d993a6ceb35031234abf4c2cba39373"
+      },
+      "roberta.encoder.layer.8.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e1e76040f3aa50b5545113e104c6f2bbc650717697268d1c448a00eb8f29522d"
+      },
+      "roberta.encoder.layer.8.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "42c7a6ef01d9dfd8c2991401efbc80a25156e27501fa1415529b4ece8ae6deb2"
+      },
+      "roberta.encoder.layer.8.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "086668289bcb4bcfc9db1feab21c60ceaba30f027710e9a75c985239ac226acd"
+      },
+      "roberta.encoder.layer.8.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8b9502b344d36ed7a37d1559b376418a74fdafb766d2dc1377dd398316fc6484"
+      },
+      "roberta.encoder.layer.8.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2163da8ca925f94120110f3be703f45adf7d5f635d2ea5862373ccd0cb00474b"
+      },
+      "roberta.encoder.layer.8.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4aa18172759313d5fc6776d108e17dafb9930d318fe4ef052e2ef9084b389fd6"
+      },
+      "roberta.encoder.layer.9.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "5a393d5cafbdeaeaeeb2bca1aaeb7344a52603ff9a2abec3decd51605396495c"
+      },
+      "roberta.encoder.layer.9.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "797fd2e96d4aa346487e91999d13218c3f11d9a5e4bc5b827e1a36e31fa0e986"
+      },
+      "roberta.encoder.layer.9.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "86d820381d35f749eeaa62e5b0e9af64c2c02f8da294582717225bbea19cefb8"
+      },
+      "roberta.encoder.layer.9.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f145222c582c337f3340bd23167bcb7033848c32945914b15d22d5fbfe51a6e5"
+      },
+      "roberta.encoder.layer.9.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f60729cf3d2cb8d8c45fea4d9bb10a3f025e0052f20dd8a5d336a7ed177d66fd"
+      },
+      "roberta.encoder.layer.9.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b37076bbf543fc188ce06c91acf0e35fc7eeaac4a7b7a406d1592f8caed867c5"
+      },
+      "roberta.encoder.layer.9.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ceb061731bd95201fed55401699ae4f210cbe5b81408605db7ee8b7278a05670"
+      },
+      "roberta.encoder.layer.9.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3145440277bef61eeec07781c1bb80d10c66b0f9dfafafe89641e6801e217695"
+      },
+      "roberta.encoder.layer.9.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3d34999fbf1a47b67a507827c75cdbef3b57c8464e7a934beb6df8f8f092f7f8"
+      },
+      "roberta.encoder.layer.9.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6cb13240d9f7f1b7f2b92fb685a3e9a101ec2ee3e2a9075d993404a77abc7ec0"
+      },
+      "roberta.encoder.layer.9.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "32126256e35d36128ce43daac3bc70aa6c1d99392ac1713859dcf7e8718633bf"
+      },
+      "roberta.encoder.layer.9.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fb2d7061a75b23504ddeb00b368884dcf64a2b69afb9b7f7db905a4db6b91f87"
+      },
+      "roberta.encoder.layer.9.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8eabd393ffab3a0ad8a0908b4f71583aa2db237f633806e2268a09f8e82a2a85"
+      },
+      "roberta.encoder.layer.9.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "18a2cde546cbf21e2e0aba0910ecd0b0fcf9216fbd4df23f9ec17d96158df4b6"
+      },
+      "roberta.encoder.layer.9.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e6aa0257508c8852ab7d0f950487342af44e442114ab005c7b34c037ca1018f7"
+      },
+      "roberta.encoder.layer.9.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "53ce7dfbf67dcf82a6e08c5b73f2fee8081ecb1ced07b56b735b191f5085d8e7"
+      },
+      "roberta.encoder.layer.10.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b1c274d16c6a667f8cfc0e1a4cac7a874e8b6f125c0b9b54be9302a2a1ce80ba"
+      },
+      "roberta.encoder.layer.10.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f2857e9001c91dbfb00c6b51042c5aa75d9f9f00ed6c94f04a947097c4e5ca79"
+      },
+      "roberta.encoder.layer.10.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9621037816f2161c645fbf8d4e4ed42e0a87a7a37f5b734048f99f2e21b6b735"
+      },
+      "roberta.encoder.layer.10.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "f3c7e2d1076979219f2e7b40ecb12459e2ccb053e4e0ea8b5387c981bece6181"
+      },
+      "roberta.encoder.layer.10.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "b7967a1a791c28b3b8c8b06ae91621cf4e8118dee49f685ccb07fcabadb22921"
+      },
+      "roberta.encoder.layer.10.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "703a14ae3f51b6c46b10835a11f09150f24fa710684a48e541b0b3b4bcf759a0"
+      },
+      "roberta.encoder.layer.10.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fb0977993986786ee5695cc5cbfcc320199b184a9ff50822d854090ad006a0b9"
+      },
+      "roberta.encoder.layer.10.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "6f27f94422691bbb152bd892db065af3a6fe2e53b85c41bc8e84db09b273b830"
+      },
+      "roberta.encoder.layer.10.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "e140375fb92f4647769b84f0e1f6e11977d75bbad545d8bdf775a776ed6d1a79"
+      },
+      "roberta.encoder.layer.10.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "322925d8bc00cd1671a6aa6b6c1dcf336dace585e190df54bb8745b7496a112f"
+      },
+      "roberta.encoder.layer.10.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "8d9e55386d07413b128abce13e3fb9a4a5250957fc8551ed6044b0f3aa69d4bc"
+      },
+      "roberta.encoder.layer.10.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7631c051190b87ac0f52375c0b86b5d9dc84a90f927a22037f6d83481d891dd7"
+      },
+      "roberta.encoder.layer.10.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "787bce97886f105ff064afe287aa08a8c932b86dbe14d1eae519e16f9b064657"
+      },
+      "roberta.encoder.layer.10.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "691b6034a140b1f1b9e0507b0bb96da2bbdcc6154c010c388ac219e623e10744"
+      },
+      "roberta.encoder.layer.10.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "879fdfa13b6fec39e415321f85ceb0395e34f72e5c5a3a4602ce4bc507738772"
+      },
+      "roberta.encoder.layer.10.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3004ef20ee7110d923fe274b338f2e8d372c4bb68d2dc4486b7f42e297ac0eb5"
+      },
+      "roberta.encoder.layer.11.attention.self.query.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "824fec569dbad738880d03b9f4f937e65581fd3e4f0d6d653c3b744481d7e6b7"
+      },
+      "roberta.encoder.layer.11.attention.self.query.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "759f4e4089893adcaa0d5878d5061c989b6676692c033270b57efdaac06ca280"
+      },
+      "roberta.encoder.layer.11.attention.self.key.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "9797b5fd1429738392c606bf294a50ee441f3ecdf2d423488e6812700385c006"
+      },
+      "roberta.encoder.layer.11.attention.self.key.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2919a7133c7d0761e06daa45b3585c54766df3496ecb82b3a18ee6d2fc490188"
+      },
+      "roberta.encoder.layer.11.attention.self.value.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "4f2a6bbd5e8500243a78b4744dd006f2497b920de4e3c02c5410749cc43fe453"
+      },
+      "roberta.encoder.layer.11.attention.self.value.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "3d7ffb43878533d34ba3a176b9431ef6e9458be9354d7c76fa9acc6352e6bb64"
+      },
+      "roberta.encoder.layer.11.attention.output.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a3e80ab07f1a83c02b676459d3015548220b215dbd6135aff03da06566aaff4d"
+      },
+      "roberta.encoder.layer.11.attention.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "be017211f5c53e18d766ed030b7c80e1eb5d27331fac9674f5021d2cab02a8df"
+      },
+      "roberta.encoder.layer.11.attention.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "ddc49f9c0df6b8cab234daf1c69499a40ea3784d061218c775cbde93232cebae"
+      },
+      "roberta.encoder.layer.11.attention.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "425acf4d7977c91235db0912a2dcde3710475e6cb56550ad0e6fa5f108b79948"
+      },
+      "roberta.encoder.layer.11.intermediate.dense.weight": {
+        "shape": [
+          3072,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "a634d147a7668f55ed37e644f7954300a2733eb8c31883d95cac065a4cfe96ad"
+      },
+      "roberta.encoder.layer.11.intermediate.dense.bias": {
+        "shape": [
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "7fa6fb5073dc868e154e9a311a19ddd21da937ff753e56f2a38ea31c8ed397b8"
+      },
+      "roberta.encoder.layer.11.output.dense.weight": {
+        "shape": [
+          768,
+          3072
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2695474eba2e4521e050030a73a294a1853fc57db4a75066f4b17d2a063bf5f9"
+      },
+      "roberta.encoder.layer.11.output.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "bc390a4b51885c4e2baff57be8358558229187fb8f85bd22e812fad9ed8c0e90"
+      },
+      "roberta.encoder.layer.11.output.LayerNorm.weight": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "cfa03975658a85ffc130d3fc7380b351e25af37e9b71681732e275164b86932a"
+      },
+      "roberta.encoder.layer.11.output.LayerNorm.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "053890630db22a24e8db9fcce7e1ca69ab40a899dc1f7f8565edd37113b7e145"
+      },
+      "classifier.dense.weight": {
+        "shape": [
+          768,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "2ecc377cd82c4a47ea83cdbe2307990d4995015a6d938bb0c37f6b1abd1d1dab"
+      },
+      "classifier.dense.bias": {
+        "shape": [
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "1f722c8a41fd97ecbc6baa07f30e361896574d98f7d83a83d2d2d027ce5b78f2"
+      },
+      "classifier.out_proj.weight": {
+        "shape": [
+          9,
+          768
+        ],
+        "dtype": "torch.float32",
+        "sha256": "d0d1f0a2844eaaf9ae17e24ff981b9f307b3c112c5c29507cc752824fe732158"
+      },
+      "classifier.out_proj.bias": {
+        "shape": [
+          9
+        ],
+        "dtype": "torch.float32",
+        "sha256": "fa1ae64c22cfd50173911420023c88e2acc4df4981da68d06077350005a18402"
+      }
+    }
+  ],
+  "tensor_values_shapes_dtypes_and_names_exact": true,
+  "tokenizer_sha256": {
+    "special_tokens_map.json": "a627d4e20da5e9482f6a08f667ead8809ff9a22dbf6284b91dacd57f217b4555",
+    "tokenizer.json": "4a45131245e310d1650c760a22038de8180f7311ace3575ad96b24f85ef38e1b",
+    "tokenizer_config.json": "e4ac45e7679c783ff5c5a5f9c1ed12c1c5fb86eda7f160b0c68a43d300ff6c91",
+    "vocab.txt": "1ad4978b5dbe269dcc402a3c6eb71ceab21d712bca3b7d3b9994845e54cdcb39"
+  },
+  "removed_components": [
+    "non-neural baseline",
+    "training/dev probabilities",
+    "split IDs",
+    "selection metadata",
+    "HF local source path"
+  ],
+  "forward_passes": 0,
+  "cuda_initialized": false,
+  "torch_version_used_for_export": "2.6.0+cu124",
+  "note": "CPU tensor export proof only; no new Validation or published CLI replay is claimed."
+}

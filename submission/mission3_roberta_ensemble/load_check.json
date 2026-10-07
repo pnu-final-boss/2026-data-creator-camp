@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "members": [
+    {
+      "model_class": "RobertaForSequenceClassification",
+      "state_keys": 201,
+      "strict_loading": "passed",
+      "cpu_fp32_parameters": true
+    },
+    {
+      "model_class": "RobertaForSequenceClassification",
+      "state_keys": 201,
+      "strict_loading": "passed",
+      "cpu_fp32_parameters": true
+    }
+  ],
+  "config_string_path_or_long_text_scan": "passed",
+  "forward_passes": 0,
+  "cuda_initialized": false,
+  "runtime_versions_for_cpu_check": {
+    "python": "3.10.21",
+    "torch": "2.6.0",
+    "transformers": "5.17.0",
+    "numpy": "2.2.6",
+    "tokenizers": "0.23.2"
+  },
+  "verification_scope": "Architecture and strict state loading only; no GPU inference or new Validation replay"
+}

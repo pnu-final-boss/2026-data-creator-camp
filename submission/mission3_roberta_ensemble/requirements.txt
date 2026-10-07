@@ -1,0 +1,7 @@
+# Frozen evaluation runtime used Python 3.10.21 on A100 CUDA.
+# Install with uv; GPU occupancy is checked by the inference CLI.
+torch==2.6.0
+transformers==5.17.0
+numpy>=1.26,<3
+# tokenizers must satisfy the chosen Transformers package. Historical producer
+# versions were not pinned in the original calibration manifest; see README.

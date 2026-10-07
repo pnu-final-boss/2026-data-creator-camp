@@ -1,0 +1,61 @@
+{
+  "format": "m3_public_bundle_sha256",
+  "files": {
+    "bundle_config.json": {
+      "sha256": "e85f276825f402d3594f8349af30344e4d0e89648dbbbdad17f91d31a2c52374",
+      "bytes": 1122
+    },
+    "export_neural.py": {
+      "sha256": "07072d78cb72ca0f8bd824a5fcaf75935125687ea14c1ef5f49efc9543fa10aa",
+      "bytes": 5971
+    },
+    "export_receipt.json": {
+      "sha256": "f9f0adb2f08794a69700170a6cd223a9cbf8fff4e3c130b1459a971f14cad869",
+      "bytes": 101143
+    },
+    "gpu_guard.py": {
+      "sha256": "032ee8ae599f7d26304b467597ede227a54abb23390bc5e9fa78da207b17b9e3",
+      "bytes": 3802
+    },
+    "inference.py": {
+      "sha256": "a26c4d56e16e0a80ba9417baede14dccb261fa5460d8d79a14c8e0fc7be967b4",
+      "bytes": 16255
+    },
+    "load_check.json": {
+      "sha256": "27210a1ea729881e863df16904000fb6361379780a4f81c16240b6a057847533",
+      "bytes": 756
+    },
+    "model.pt": {
+      "sha256": "263c8aa0495cb67366361b9672af6c0c1a5a963f54d74322888aa8a860120763",
+      "bytes": 885109986
+    },
+    "README.md": {
+      "sha256": "6f9200a36338ba043d0ffdcc593bfe7fd0e13e627b63eb126a63dcffa924dec5",
+      "bytes": 6013
+    },
+    "requirements.txt": {
+      "sha256": "9b309cbfb02000a8c9221900daeea702fa094c47c4df2d4e0e2b117c61e22baa",
+      "bytes": 333
+    },
+    "test_inference.py": {
+      "sha256": "0e6e02310cdb26646c24169123c7d94427a78e43f0c82e712b0779ccb5f8a0a1",
+      "bytes": 13511
+    },
+    "tokenizer/special_tokens_map.json": {
+      "sha256": "a627d4e20da5e9482f6a08f667ead8809ff9a22dbf6284b91dacd57f217b4555",
+      "bytes": 1022
+    },
+    "tokenizer/tokenizer_config.json": {
+      "sha256": "e4ac45e7679c783ff5c5a5f9c1ed12c1c5fb86eda7f160b0c68a43d300ff6c91",
+      "bytes": 1374
+    },
+    "tokenizer/tokenizer.json": {
+      "sha256": "4a45131245e310d1650c760a22038de8180f7311ace3575ad96b24f85ef38e1b",
+      "bytes": 751999
+    },
+    "tokenizer/vocab.txt": {
+      "sha256": "1ad4978b5dbe269dcc402a3c6eb71ceab21d712bca3b7d3b9994845e54cdcb39",
+      "bytes": 248477
+    }
+  }
+}

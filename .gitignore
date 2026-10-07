@@ -45,3 +45,8 @@ dcc_annotation/
 # 인용을 제거한 뒤에는 이 줄을 지우고 다시 add 할 것.
 docs/
 test.ipynb
+
+# Mission 3 runtime caches remain local.
+submission/mission3_roberta_ensemble/.uv-cache/
+submission/mission3_roberta_ensemble/.venv*/
+submission/mission3_roberta_ensemble/__pycache__/
